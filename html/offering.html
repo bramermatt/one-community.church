@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="color-scheme" content="light dark">
+    <link rel="shortcut icon" type="image/x-icon" href="../img/occ-favicon.png">
+    <link rel="stylesheet" href="../css/index-v2.css"> 
+
+    <title>Offerings | One Community Church</title>
+
+</head>
+<body>
+
+
+
+    <!--navbar goes here-->
+
+    <script src="../js/arrow.js"></script>
+    <script src="../js/openNav.js"></script>
+
+    <!-- <script src="js/scroll-active.js"></script> -->
+
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <ul>
+            <!--same page links-->
+            <!-- <a href="#about"><li>About Us</li></a>  -->
+            <!-- <a href="#statement"><li>Our Faith</li></a> -->
+            <!-- <a href="#our-services"><li>Services</li></a> -->
+            <!-- <a href="#what-to-expect"><li>What to Expect</li></a> -->
+            <!-- <li><a href="#our-staff">Our Staff</a></li> -->
+
+            <a href="../index.html"><li>Home</li></a>
+            <a href="../html/our-history.html"><li>Our History</li></a>
+            <a href="../html/meet-our-pastors.html"><li>Meet Our Pastors</li></a>
+            <a href="../html/staff.html"><li>Our Staff</li></a>
+            <a href="../html/ministries.html"><li>Ministries</li></a>
+            <a href="../html/connect.html"><li>Connect</li></a>
+    
+            <!-- <a href=""><img src="../img/occ-favicon.png" alt="logo"></a> -->
+            <!-- <li>One Community Church Indiana</li> -->
+            <a href="../html/prayers.html"><li>Prayer Requests</li></a>
+            <a href="../html/offering.html" class="active"><li>Offerings</li></a>
+            <a href="../html/events.html"><li>Events</li></a>
+            <a href="../html/facilities.html"><li>Facilities</li></a>
+        </ul>
+    </div>
+
+    <div class="hamburger" style="min-width: 880px;">
+      <!-- <script src="js/hamburger.js"></script> -->
+      <!-- <a href="#" onclick="myFunction()">
+        &#9776;
+      </a> -->
+    <span onclick="openNav()" style="max-width: 880px;">&#9776;</span>
+    <img src="../img/occ-favicon.png" alt="logo"> 
+    </div>
+
+    <div class="hamburger-mobile">
+      <span onclick="openNavMobile()">&#9776;</span>
+      <img src="../img/occ-favicon.png" alt="logo"> 
+    </div>
+
+    <div class="topTitle">
+      <h1>OCC | Offerings</h1>
+    </div>
+
+    <div id="main">
+
+    <div class="intro">
+        <h1>One Community Church Indiana</h1>
+        <h2>Where Community is Our Middle Name!</h2>
+    </div>
+
+
+    <div class="offerings" id="offerings">
+      <div class="item" style="max-width: 900px; padding: 20px; margin-left: auto; margin-right: auto;">
+      <!-- <a href="html/offering.html"> -->
+        <h1>Offerings</h1>
+      <!-- </a> -->
+      <p>We would like to thank you in advance for your contribution to fulfilling the needs and missions One Community Church of Indiana!</p>
+
+      <p><strong>Click the link below to give your online Offering!</strong></p>
+
+      <div>
+      <div><div style="
+      overflow: auto;
+      margin-left: auto;
+      margin-right: auto;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      width: 260px;
+      background: #FFFFFF;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      box-shadow: -2px 10px 5px rgba(0, 0, 0, 0);
+      border-radius: 10px;
+      ">
+      <div style="padding: 20px;">
+      <a target="_blank" data-url="https://square.link/u/9iWte5VO" href="https://square.link/u/9iWte5VO" style="
+        display: inline-block;
+        line-height: 48px;
+        height: 48px;
+        color: #ffffff;
+        min-width: 220px;
+        background-color: #000000;
+        text-align: center;
+        text-decoration: none;
+        box-shadow: 0 0 0 1px rgba(0,0,0,.1) inset;
+        
+      ">Church Offerings</a>
+      </div>
+    </div>
+    </div>
+  </div>
+    
+      <script>
+        function showCheckoutWindow(e) {
+          e.preventDefault();
+    
+          const url = document.getElementById('embedded-checkout-modal-checkout-button').getAttribute('data-url');
+          const title = 'Square Online Checkout';
+    
+          // Some platforms embed in an iframe, so we want to top window to calculate sizes correctly
+          const topWindow = window.top ? window.top : window;
+    
+          // Fixes dual-screen position                                Most browsers          Firefox
+          const dualScreenLeft = topWindow.screenLeft !==  undefined ? topWindow.screenLeft : topWindow.screenX;
+          const dualScreenTop = topWindow.screenTop !==  undefined   ? topWindow.screenTop  : topWindow.screenY;
+    
+          const width = topWindow.innerWidth ? topWindow.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
+          const height = topWindow.innerHeight ? topWindow.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
+    
+          const h = height * .75;
+          const w = 500;
+    
+          const systemZoom = width / topWindow.screen.availWidth;
+          const left = (width - w) / 2 / systemZoom + dualScreenLeft;
+          const top = (height - h) / 2 / systemZoom + dualScreenTop;
+          const newWindow = window.open(url, title, `scrollbars=yes, width=${w / systemZoom}, height=${h / systemZoom}, top=${top}, left=${left}`);
+    
+          if (window.focus) newWindow.focus();
+        }
+    
+        // This overrides the default checkout button click handler to show the embed modal
+        // instead of opening a new tab with the given link url
+        document.getElementById('embedded-checkout-modal-checkout-button').addEventListener('click', function (e) {
+          showCheckoutWindow(e);
+        });
+      </script>
+    </div>
+
+      <!-- <a href="https://squareup.com/terminal/" target="_blank"><img src="img/offerings/offering-icon.jpg" alt="offering-icon"></a> -->
+  </div>
+
+
+    <div class="footer">
+      <!-- <img src="img/mLogo.png" alt="logo"> -->
+
+      <div class="foot-buttons">
+
+      <div class="links">
+          <h1>Site Links</h1>
+          <ul>
+            <a href="../index.html"><li>Home</li></a>
+            <a href="../html/our-history.html"><li>Our History</li></a>
+            <a href="../html/meet-our-pastors.html"><li>Meet Our Pastors</li></a>
+            <a href="../html/staff.html"><li>Our Staff</li></a>
+            <a href="../html/ministries.html"><li>Ministries</li></a>
+            <a href="../html/connect.html"><li>Connect</li></a>
+    
+            <!-- <a href=""><img src="../img/occ-favicon.png" alt="logo"></a> -->
+            <!-- <li>One Community Church Indiana</li> -->
+            <a href="../html/prayers.html"><li>Prayer Requests</li></a>
+            <a href="../html/offering.html" class="active"><li>Offerings</li></a>
+            <a href="../html/events.html"><li>Events</li></a>
+            <a href="../html/facilities.html"><li>Facilities</li></a>
+          </ul>
+      </div>
+
+      <div class="more-links">
+          <h1>More Site Links</h1>
+          <ul>
+              <a href="docs/statement of faith/Statement-of-Faith-2018.pdf" target="_blank"><li>Our Statement of Faith</li></a>
+              <a href="https://waivermaster.com/sign.html?q=D5KCR8CL2RMGR&fbclid=IwAR0HoBf3wUrvc6467SKtjDC9-zaOdvowKx8ql2TbjeqLYrOHizuHBL7Z-tg" target="_blank"><li>Facilities Agreement</li></a>
+          </ul>
+      </div>
+
+      <div class="social-links">
+          <h1>Social Links</h1>
+          <ul>
+              <a href="https://www.facebook.com/onecommunitychurch" target="_blank"><li>Facebook</li></a>
+              <a href="https://www.instagram.com/occindiana/" target="_blank"><li>Instagram</li></a>
+              <a href="https://twitter.com/OneCCIndiana" target="_blank"><li>Twitter</li></a>
+              <a href="https://www.youtube.com/c/OneCommunityChurchIndiana" target="_blank"><li>Youtube</li></a>
+          </ul>
+      </div>
+
+      <div class="connect">
+        <h1>Submit</h1>
+        <ul>
+          <a href="mailto:pastoronecommunity@gmail.com?subject=Prayer%20Request"><li>Prayer Request</li></a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScMjB4WOonUZl6GeC7wZnYWrJmF5OTvE_90fhHpiu9AJBHWNQ/viewform" target="_blank"><li>Connect</li></a>
+          <a href="https://square.link/u/9iWte5VO" target="_blank"><li>Offering</li></a>
+        </ul>
+    </div>
+
+  </div>
+
+  <a href=""><img src="../img/occ-favicon.png" alt="logo"></a>
+   
+
+    <!-- <button onclick="topFunction()" id="myBtn" title="Go to top">	&#128285;</button> -->
+
+    <span onclick="topFunction()" id="myBtn" title="Go to top">&#128285;</span>
+
+    <script src="../js/top.js"></script>
+
+</div>
+</body>
+</html>

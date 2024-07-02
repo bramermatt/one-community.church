@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="color-scheme" content="light dark">
+    <link rel="shortcut icon" type="image/x-icon" href="img/occ-favicon.png">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="home.css"> 
+
+    <title>One Community Church Indiana | Home</title>
+</head>
+<body>
+
+    <!-- 
+    Here are some essential elements to include on your church's website:
+
+1. **Home Page:**
+   - Welcome message
+   - Service times
+   - Location with a map
+   - Upcoming events or announcements
+   - A brief introduction to your church’s mission and values
+
+2. **About Us:**
+   - Church history
+   - Mission and vision statements
+   - Leadership team bios and photos
+   - Denominational affiliation, if any
+
+3. **Ministries:**
+   - Overview of different ministries (e.g., children, youth, adult, outreach)
+   - Contact information for ministry leaders
+   - Schedules and events for each ministry
+
+4. **Sermons:**
+   - Recorded sermons (audio and/or video)
+   - Sermon notes and transcripts
+   - Series archives
+
+5. **Prayer:**
+   - Prayer request form
+   - Information on prayer meetings or groups
+   - Encouragement and resources for personal prayer
+
+6. **Giving:**
+   - Online giving options
+   - Explanation of how donations are used
+   - Fundraising campaigns or special collections
+
+7. **Events:**
+   - Calendar of upcoming events
+   - Event registration forms
+   - Recaps of past events
+
+8. **Facilities:**
+   - Description of your church facilities
+   - Information on facility rentals or usage policies
+   - Directions and parking information
+
+9. **Follow Us:**
+   - Links to social media profiles
+   - Newsletter signup
+   - Contact information and office hours
+
+10. **Contact Us:**
+    - Contact form
+    - Church office phone number and email
+    - Physical address with a map
+    - Staff contact information
+
+11. **New Here?**
+    - Welcome guide for first-time visitors
+    - Information on what to expect at services
+    - FAQs about the church and services
+
+12. **Blog or News:**
+    - Articles or updates about church activities
+    - Inspirational messages or devotionals
+    - Community news and outreach stories
+
+-->
+
+    <!--
+        NOTES // 2024.06.05 // mb
+        Setting up new home page for an updated look. Adding some new features, maybe. Will update with more info.
+     -->
+
+    <!--
+        add a marquee for news! maybe.. 2024.06.05
+    <marquee>testing</marquee>
+    -->
+
+
+    <!--
+        Nav bar
+
+        desktop
+        left - img
+        right - links
+
+        mobile
+        left - img
+        right - hamburger
+    -->
+    <nav id="navbar">
+
+        <a href=""><img src="img/occ-favicon.png" alt=""></a>
+        <h1>One Community Church Indiana</h1>
+
+        <ul class="nav-topic">
+            <li><a href="">Sign up for VBS 2024</a></li>
+            <!-- <li>/</li> -->
+            <!-- <li class="fa"><a href="">&#xf1ae; First Time Here!</a></li> -->
+        </ul>
+
+        <ul class="nav-desktop">
+            <li><a href="" class="active">Home</a></li>
+            <li><a href="">About Us</a></li>
+            <li><a href="">Ministries</a></li>
+            <li><a href="">Prayer</a></li>
+            <li><a href="">Giving</a></li>
+            <li><a href="">Events</a></li>
+            <li><a href="">Facilities</a></li>
+            <li><a href="">Follow Us</a></li>
+        </ul>
+
+        <ul class="nav-mobile">
+            <li>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction();scrollToTop()">
+                    <i class="fa fa-bars" style="font-size: 22px;"></i>
+                  </a>
+            </li>
+        </ul>
+
+    </nav>
+
+    <ul class="mobile-nav" id="mobile-nav">
+        <!-- <h2>Pages</h2> -->
+        <li><a href="" class="active">Home</a></li>
+        <li><a href="">About Us</a></li>
+        <li><a href="">Ministries</a></li>
+        <li><a href="">Prayer</a></li>
+        <li><a href="">Giving</a></li>
+        <li><a href="">Events</a></li>
+        <li><a href="">Facilities</a></li>
+        <li><a href="">Follow Us</a></li>
+    </ul>
+
+
+
+    <!-- <script src="js/navScroll.js"></script> -->
+
+    
+    <!-- <header>
+        <img src="img/about/occ-img1.jpeg" alt="">
+    </header> -->
+
+    <main>
+
+        <!-- verse of the day - by bibleref -->
+
+        <div class="pane" id="vod">
+        
+
+            <!-- <div class="split-pane"> -->
+
+                
+
+
+            <div class="split-text" style="max-width: 550px; color: var(--text); margin: 0 auto; padding: 25px;">
+                <h3>Verse of the Day!</h3>
+                <script src="https://www.biblegateway.com/votd/votd.write.callback.js" target="_blank"></script>
+                <script src="https://www.biblegateway.com/votd/get/?format=json&version=NIV&callback=BG.votdWriteCallback" target="_blank"></script>
+                <!-- alternative for no javascript -->
+                <noscript>
+                <iframe framespacing="0" frameborder="no" src="https://www.biblegateway.com/votd/get/?format=html&version=NIV">View Verse of the Day</iframe>
+                </noscript>
+            </div>
+
+            <!-- <div class="split-text">
+
+                <form action="https://www.biblegateway.com/quicksearch/">
+                    <table border="1" cellspacing="0" cellpadding="2" style="border-color: #600;">
+                    <tr><th style="background-color: #600; color:#fff; text-align: center; padding: 0 10px;">Lookup a word or passage in the Bible</th></tr>
+                    <tr><td style="background-color: #fff; text-align: center; padding: 0 10px;">
+                    <div style="margin-bottom: 0;">
+                    <input style="margin:2px" type="text" name="quicksearch" /><br />
+                    <input style="margin:2px" type="submit" value="Search BibleGateway.com" /><br />
+                    </div>
+                    <a href="https://www.biblegateway.com/" title="The Bible in multiple languages, versions, and formats">
+                    <img src="https://www.biblegateway.com/assets/images/logos/bglogo_sm.gif?103106" width="146" height="44" alt="BibleGateway.com" border="0" /></a><br />
+                    <small>
+                    <a href="https://www.biblegateway.com/usage/form/">Include this form on your page</a><br />
+                    </small>
+                    </td></tr>
+                    </table>
+                    </form>
+
+            </div> -->
+
+        </div>
+
+        </div>
+
+
+
+        <!-- <div class="category">
+            <h1>Get to Know One Community Church!</h1>
+        </div>
+
+
+        <div class="grid-three-items">
+
+            <div class="item">
+                <h1>Who We Are?</h1>
+                <h2>One Community Church</h2>
+                <img src="img/about/occ-img.jpg" alt="">
+                <blockquote>One Community Church</blockquote>
+            </div>
+
+            <div class="item">
+                <h1>Where We Are?</h1>
+                <h2>1810 Blackiston Mill Road, Clarksville, IN 47129</h2>
+                <div class="iframe-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3130.32639216147!2d-85.77988768442322!3d38.31827188847578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88696de4c640ef57%3A0xcdb8a9dc819fbcfc!2s1810%20Blackiston%20Mill%20Rd%2C%20Clarksville%2C%20IN%2047129!5e0!3m2!1sen!2sus!4v1664753261156!5m2!1sen!2sus" width="100%" height="380" style="border:0; display: block; margin-bottom: 10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <blockquote>Google Maps</blockquote>
+    
+            </div>
+
+            <div class="item">
+                <h1>What Are We Preaching?</h1>
+                <h2>The Book of John!</h2>
+                <div class="iframe-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Ye6-hayXF6k?si=uOiSC8FGL98Kr1pj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  </div>
+                  <blockquote>Our most recent Sunday Service | April 14, 2024</blockquote>
+            </div>
+
+
+        </div> -->
+
+<!-- first time section -->
+
+        <div class="pane" id="ftg">
+
+            <!-- text left, picture right -->
+            <div class="split-pane">
+
+                <div class="split-text">
+                    <p class="fa">&#xf1ae; first time guest</p>
+                    <h2>Your First Visit?</h2>
+                    <p>After arriving and finding the perfect parking spot, enter at one of our two main entrances! Feel free to enjoy some of the snacks or drinks that are always available before every service.</p>
+                </div>
+
+                <div class="split">
+                    <img src="img/about/occ-img.jpg" alt="welcome">
+                </div>
+
+            </div>
+
+            <!-- text left, picture right -->
+            <div class="split-pane">
+
+                <div class="split">
+                    <img src="img/facilities/sanctuary.jpg" alt="sanctuary">
+                </div>
+
+                <div class="split-text">
+                    <p class="fa">&#xf1ae; first time guest</p>
+
+                    <h2>What Type of Music?</h2>
+                    <p>We believe that God loves music and so do we! We have been beyond blessed to have several God gifted musicians and singers lead us on a weekly basis! We combine a mix of contemporary worship songs while trying not to forget some of the classic hymns.</p>
+                </div>
+
+
+
+            </div>
+
+
+            <!-- text left, picture right -->
+            <div class="split-pane">
+
+                <div class="split-text">
+                    <p class="fa">&#xf1ae; first time guest</p>
+
+                    <h2>Have Kids?</h2>
+                    <p>We love children, please bring them! We have a nursery and a great children's program available during every service! They will be well taken care of, and learn something in the process.</p>
+                </div>
+
+                <div class="split">
+                    <img src="img/item/kids.jpg" alt="kids">
+                </div>
+
+            </div>
+
+                        <!-- text left, picture right -->
+                        <div class="split-pane">
+
+                            <div class="split">
+                                <img src="img/item/wear.jpg" alt="wear">
+                            </div>
+            
+                            <div class="split-text">
+                                <p class="fa">&#xf1ae; first time guest</p>
+            
+ 
+                                <h2>What To Wear?</h2>
+                                <p>Our dress is casual and comfortable. Jeans, khakis, or even shorts are fine! It is a matter of the heart that we are concerned with.</p>
+                            </div>
+            
+            
+            
+                        </div>
+
+
+        </div>
+
+
+        <div class="pane">
+
+            <div class="split-pane special" id="wwb">
+
+            <!-- statement of faith -->
+            <div class="split-text">
+                <h2 style="font-size: xx-large;">What We Believe</h2>
+                <ol>
+
+
+                    <li><strong>The Scriptures</strong> – We believe that the Holy Bible was written by men divinely inspired, and is a perfect treasure of heavenly instruction that is used to guide our lives. It has God for it author, salvation for its end, and truth without any mixture of error. (2 Timothy 3:15-17) (1 Peter 1:25) </li> 
+
+                    
+
+                    <li><strong>The True God</strong> – We believe that there is one, and only one, living and true God. He is the infinite, intelligent Spirit, the Maker, and Supreme Ruler of heaven and earth. He is indescribably glorious in holiness, and worthy of all possible honor confidence, and love; that in the unity of the Godhead there are three persons, the Father, the Son, and the Holy Spirit.(1 Thessalonians 1:9) (John 15:1)</li> 
+                    
+                    <ul>
+                        <li><strong>God the Father</strong> - God as Father reigns with providential care over His universe, His creatures, and the flow of the stream of human history according to the purposes of His grace. He is all powerful, all knowing, all loving, and all wise. God is Father in truth to those who become children of God through faith in Jesus Christ. He is fatherly in His attitude toward all men. (Genesis 1:1; 2:7)</li>
+
+                        <li><strong>God the Son</strong> - Christ is the eternal Son of God. In His incarnation as Jesus Christ was conceived of the Holy Spirit and born of the virgin Mary. Jesus perfectly revealed and did the will of God, taking upon Himself human nature with its demands and necessities and identifying Himself completely with mankind yet without sin. His substitutionary death on the cross He made provision for the redemption of men from sin. He was raised from the dead with a glorified body and appeared to His disciples as the person who was with them before His crucifixion. He ascended into heaven and is now exalted at the right hand of God where He is the one Mediator, fully God, fully man, in whose Person is effected the reconciliation between God and man. He will return in power and glory to judge the world and to consummate His redemptive mission. He now dwells in all believers as the living and ever present Lord. (Isaiah 7:14; Isaiah 53:1-12) (Matthew 1:18-23) (John 1:1-18)</li>
+
+
+                        <li><strong>God the Holy Spirit</strong> - The Holy Spirit is the Spirit of God, fully divine. He inspired holy men of old to write the Scriptures. Through illumination He enables men to understand truth. He exalts Christ. He convicts men of sin, of righteousness, and of judgment. He calls men to the Savior, and effects regeneration. At the moment of regeneration He baptizes every believer into the Body of Christ. He cultivates Christian character, comforts believers, and bestows the spiritual gifts by which they serve God through His church. He seals the believer unto the day of final redemption. His presence in the Christian is the guarantee that God will bring the believer into the fullness of the stature of Christ. He enlightens and empowers the believer and the church in worship, evangelism and service. (John 4:24; 14:16-17,26; 15:26; 16:7-14) (Acts 1:8)</li>
+
+                    </ul>
+
+                    <li><strong>The Fall of Man</strong> – We believe that Man was created in holiness, under the law of his Maker, but by voluntary transgression fell from that holy and happy state; in consequence of which all mankind are now sinners, not by constraint but choice. Man is by nature utterly void of the holiness required by the law of God, totally inclined to evil; and therefore under just condemnation to eternal ruin, without defense or excuse. (Genesis 3:1-24) (Romans 5:14, 19)</li>
+
+                    <li><strong>Salvation</strong> – Salvation involved the redemption of the whole man, and is offered freely to all who accept Jesus Christ as Lord and Savior, who by His own blood obtained eternal redemption for the believer. There is no salvation apart from personal faith in Jesus Christ as Lord.</li> 
+                    
+                    <ul>
+                        <li><strong>Regeneration, or new birth</strong> - a work of God’s grace whereby believers become a new creation in Christ Jesus. It is a change of heart began by the Holy Spirit through conviction of sin, to which the sinner responds in repentance toward God and faith in the Lord Jesus Christ. Repentance and faith are inseparable experiences of grace. Repentance is a genuine turning from sin toward God. Faith is the acceptance of Jesus Christ and commitment of the entire personality to Him as Lord and Savior.</li>
+
+                        <li><strong>Justification</strong> - God’s act of declaring all sinners who repent and believe in Christ, “not guilty” based upon the principles of His righteousness. Justification brings the believer into a relationship of peace and favor with God.</li>
+
+                        <li><strong>Sanctification</strong> - the experience, beginning in regeneration, by which the believer is set apart to God’s purposes, and is enabled to progress toward moral and spiritual maturity through the presence and power of the Holy Spirit dwelling in him. Growth in grace should continue throughout the new believer’s life.</li>
+                        
+                        <li><strong>Glorification</strong> - the culmination of salvation and is the final blessed and abiding state of the redeemed in heaven. 
+                        <details>
+                            <summary>
+                                More Verse References
+                            </summary>
+                            <div>
+                            (Matthew 1:21) (John 1:29, 3:16, 5:24, 10:9,28) (Acts 2:21, 4:12, 15:11, 16:31) (Romans 1:16, 3:23-25, 4:3, 5:8-10, 6:1-23, 8:1-18, 31-35, 10:9-10,13) (1 Corinthians 6:19-20) (2 Corinthians 5:17-20) (Ephesians 2:8-10) (Colossians 3:1-11) (1 Thessalonians 5:23-24) (Titus 2:11-14) (James 2:14-17) (1 Peter 1:2-23)
+                            </div>
+
+                        </details></li>
+
+                    </ul>
+
+                    <li><strong>The Perseverance of Saints</strong> – We believe that only true believers will endure unto the end. Their persevering attachment to Christ distinguishes them from superficial believers and they are kept by the power of God through faith unto salvation. (John 6:47, 10:27-28) (Romans 8:1) (Philippians 1:6)</li>
+                    
+
+                    <li><strong>The Church</strong> – We believe that the visible church of Christ is a congregation of baptized believers. (Acts 2:38, 42) (1 Corinthians 12:13, 27)</li>
+
+                    <li><strong>Baptism</strong> – We believe that Christian baptism is the immersion in water of a believer, into the name of the Father, and Son, and Holy Spirit. (Matthew 3:15-17, Matthew 28:19) (Acts 16:30-33) (Romans 6:3-4) (Colossians 2:12) (Acts 16:30-33)</li>
+                
+                    <li><strong>The Lord’ Supper</strong> – The Lord’s Supper, the sacred use of bread and juice, is when the members of the body of Christ commemorate together the dying love of Christ. This is always preceded by our careful self-examination. (Luke 22:19-20) (1 Corinthians 10:16-17) (1 Corinthians 11:23-29)</li>
+                
+
+                    <li><strong>Of the World to Come</strong> – We believe that the end of the world is approaching. At the last day Christ will descend from heaven and raise the dead from the grave to final retribution. A solemn separation will then take place, the wicked will be adjudged to endless punishment and the righteous to endless joy. This judgment will fix forever the final state of men in heaven or hell, on principles of righteousness. (John 14:3) (Luke 12:40) (Acts 1:11) (1 Corinthians 15:58) (2 Corinthians 5:10) (Jude 1:14)</li>
+                    
+                </ol>
+
+            </div>
+
+            <div class="split" style="background: linear-gradient(green, rgb(255, 196, 0));">
+                
+                <!-- <img src="img/backgrounds/landscape.webp" alt="" style="height: 100%; width: 100%;"> -->
+            </div>
+
+        </div>
+
+        </div>
+
+
+
+
+
+
+        <!-- <section>
+        
+        <article>
+            <h1>One Community Church</h1>
+            <h4>Where Community is Our Middle Name!</h4>
+        </article>
+
+    </section>
+
+
+        <section>
+
+            <h1>Where we are</h1>
+            
+            <article>
+                <h1>1810 Blackiston Mill Road, Clarksville, IN 47129</h1>
+                <div class="iframe-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3130.32639216147!2d-85.77988768442322!3d38.31827188847578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88696de4c640ef57%3A0xcdb8a9dc819fbcfc!2s1810%20Blackiston%20Mill%20Rd%2C%20Clarksville%2C%20IN%2047129!5e0!3m2!1sen!2sus!4v1664753261156!5m2!1sen!2sus" width="100%" height="380" style="border:0; display: block; margin-bottom: 10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+    
+            </article>
+
+        </section>
+
+
+        <div class="item">
+            <h1>Our Current Sermon Series</h1>
+            <h2>The Book of John</h2>
+            <p>We are almost completely through the book of John!</p>
+
+            <div class="iframe-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Ye6-hayXF6k?si=uOiSC8FGL98Kr1pj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+              <blockquote>Our most recent Sunday Service | April 14, 2024</blockquote>
+              </div>
+        </div> -->
+
+
+
+
+        
+
+    </main>
+
+
+    <footer>
+
+    <div class="footer-content">
+        <div class="footer-tree">
+            <h2>Page Contents</h2>
+            <ul>
+                <li><a href="#vod">Verse of the Day</a></li>
+                <li><a href="#ftg">First Time Guest</a></li>
+                <li><a href="#wwb">What We Believe</a></li>
+            </ul>
+            
+            
+            
+        </div>
+
+        <!-- <div class="footer-tree">
+            <h2>Page Contents</h2>
+            <ul>
+                <li><a href="">Verse of the Day</a></li>
+                <li><a href="">First Time Guest</a></li>
+                <li><a href="">What We Believe</a></li>
+            </ul>
+            
+            
+            
+        </div>
+
+        <div class="footer-tree">
+            <h2>Page Contents</h2>
+            <ul>
+                <li><a href="">Verse of the Day</a></li>
+                <li><a href="">First Time Guest</a></li>
+                <li><a href="">What We Believe</a></li>
+            </ul>
+            
+            
+            
+        </div>
+
+        <div class="footer-tree">
+            <h2>Page Contents</h2>
+            <ul>
+                <li><a href="">Verse of the Day</a></li>
+                <li><a href="">First Time Guest</a></li>
+                <li><a href="">What We Believe</a></li>
+            </ul>
+            
+            
+            
+        </div> -->
+
+        
+
+
+
+
+
+
+    </div>
+
+    <p>One Community Church Indiana, located at <a href="https://www.google.com/maps?ll=38.318245,-85.777759&z=16&t=m&hl=en&gl=US&mapclient=embed&q=1810+Blackiston+Mill+Rd+Clarksville,+IN+47129" target="_blank">1810 Blackiston Mill Road, Clarksville, IN 47129</a></p>
+
+    </footer>
+
+        <!-- bibleref verses -->
+        <script src="https://www.biblegateway.com/public/link-to-us/tooltips/bglinks.js" type="text/javascript"></script>
+        <script type="text/javascript">
+        BGLinks.version = "NIV";
+        BGLinks.linkVerses();
+        </script>
+
+    
+
+<script src="js/mobile-menu.js"></script>
+
+</body>
+</html>
