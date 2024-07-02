@@ -272,7 +272,7 @@ nav li a:hover, .mobile-nav li a:hover, nav button:hover, .mobile-nav details a:
     } */
 
     i {
-        font-size: 24px;
+        /* font-size: 24px; */
         margin-right: 10px;
     }
     
@@ -765,11 +765,14 @@ nav .grid-content .pd-15 h1 {
 .pd-15 {
     padding: 15px;
 
+
     h2 {
         margin-top: 0;
         margin-bottom: 15px;
         font-size: larger;
     }
+
+
 }
 
 .pd-15-top {
@@ -1565,6 +1568,11 @@ section img {
     .split-pane {
         display: block;
     }
+
+    .locate-us a:link, .locate-us a:visited {
+        display: block;
+    }
+    
 }
 
 
