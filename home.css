@@ -186,7 +186,7 @@ nav li a:hover, .mobile-nav li a:hover, nav button:hover, .mobile-nav details a:
     z-index: 1000;
     margin-top: 0;
     padding-left: 0;
-    padding-top: 30px;
+    padding-top: 50px;
     padding-bottom: 50px;
     max-width: max-content;
 
@@ -206,7 +206,7 @@ nav li a:hover, .mobile-nav li a:hover, nav button:hover, .mobile-nav details a:
     max-height: 100%;
     background-color: white; /* Background color */
     z-index: 1000; /* Ensure it is above other content */
-    padding: 10px;
+    /* padding: 10px; */
     box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* Optional: Add some shadow for better visibility */
     
     /* overflow: hidden; */
@@ -216,7 +216,7 @@ nav li a:hover, .mobile-nav li a:hover, nav button:hover, .mobile-nav details a:
     z-index: 1000;
     margin-top: 0;
     padding-left: 0;
-    padding-top: 80px;
+    padding-top: 60px;
     padding-bottom: 50px;
     max-width: max-content;
     display: none; /* Initially hidden */
@@ -248,8 +248,9 @@ nav li a:hover, .mobile-nav li a:hover, nav button:hover, .mobile-nav details a:
 
 }
 
-.nav-mobile .fa {
+.nav-mobile .fa, .mobile-nav .fa {
     font-size: 22px !important;
+    margin-right: 2vw;
     cursor: pointer;
 }
 
@@ -944,7 +945,7 @@ main img {
 .topic h1 {
     max-width: 1400px;
     margin: 0 auto;
-    margin-top: 75px;
+    margin-top: 78px;
     margin-bottom: 10px;
     font-size: 50px;
     line-height: 1.2;
@@ -1062,7 +1063,7 @@ section img {
 
 .title h1, .title h3 {
     /* margin: 0; */
-    margin-top: 10px;
+    /* margin-top: 10px; */
     margin-bottom: 0;
 }
 
@@ -1315,7 +1316,7 @@ section img {
 }
 
 
-@media screen and (max-width: 1700px) {
+@media screen and (max-width: 1650px) {
     /* nav h1 {
         display: none;
     } */
