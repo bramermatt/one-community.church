@@ -718,6 +718,15 @@ details summary {
     width: 100%;
 }
 
+nav .grid-content .pd-15 h1 {
+    padding-top: 0;
+}
+
+.grid-content .pd-15 h1 {
+    padding-top: 70px;
+    margin-bottom: 0;
+}
+
 .grid-two-content {
     display: grid;
     /* grid-template-columns: 1fr 1fr; */
@@ -757,8 +766,9 @@ details summary {
     padding: 15px;
 
     h2 {
-        margin-top: 10px;
+        margin-top: 0;
         margin-bottom: 15px;
+        font-size: larger;
     }
 }
 
@@ -766,8 +776,9 @@ details summary {
     padding-top: 15px;
 
     h2 {
-        margin-top: 10px;
+        margin-top: 0;
         margin-bottom: 15px;
+        font-size: larger;
     }
 }
 
@@ -785,7 +796,8 @@ details summary {
 }
 
 .profile img {
-    max-height: 200px;
+    max-height: 300px;
+    max-width: 100%;
     /* width: 100%; */
     object-fit: cover;
     border-radius: 10px;
@@ -991,6 +1003,8 @@ main img {
     object-fit: cover;
     border-radius: 12px;
     width: 100%;
+
+    margin-bottom: 20px;
 }
 
 .grid-item h2 {
@@ -1341,6 +1355,10 @@ section img {
         grid-template-columns: repeat(2, minmax(auto, auto));
     }
 
+    .grid-content {
+        grid-template-columns: repeat(1, minmax(auto, auto));
+    }
+
 
     .social-link img {
         max-width: 100%;
@@ -1425,12 +1443,6 @@ section img {
 
 
 }
-
-@media screen and (max-width: 1000px) {
-    
-
-}
-
 
 @media screen and (max-width: 800px) {
     .item {
