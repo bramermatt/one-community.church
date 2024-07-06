@@ -1,14 +1,46 @@
-const list = document.querySelector(".carousel");
+function scrollCarousel(wrapperId, direction) {
+  const wrapper = document.getElementById(wrapperId);
+  const container = wrapper.querySelector('.carousel-container');
+  const slideWidth = container.scrollWidth / container.childElementCount;
+  const newScrollLeft = container.scrollLeft + (slideWidth * direction);
 
-// We want to know the width of one of the items. We'll use this to decide how many pixels we want our carousel to scroll.
-const item = document.querySelector(".carousel_item");
-const itemWidth = item.offsetWidth;
+  container.scrollTo({
+      left: newScrollLeft,
+      behavior: 'smooth'
+  });
 
-function handleClick(direction) {
-  // Based on the direction we call `scrollBy` with the item width we got earlier
-  if(direction === "previous") {
-    list.scrollBy({ left: -itemWidth, behavior: "smooth" });
+  // Ensure arrows are updated after scroll completes
+  setTimeout(() => updateArrows(wrapperId), 100); // Adjust timeout if necessary
+}
+
+function updateArrows(wrapperId) {
+  const wrapper = document.getElementById(wrapperId);
+  const container = wrapper.querySelector('.carousel-container');
+  const leftArrow = wrapper.querySelector('.arrow-left');
+  const rightArrow = wrapper.querySelector('.arrow-right');
+
+  if (container.scrollLeft <= 0) {
+      leftArrow.classList.add('hidden');
   } else {
-    list.scrollBy({ left: itemWidth, behavior: "smooth" });
+      leftArrow.classList.remove('hidden');
+  }
+
+  if (container.scrollLeft + container.clientWidth >= container.scrollWidth) {
+      rightArrow.classList.add('hidden');
+  } else {
+      rightArrow.classList.remove('hidden');
   }
 }
+
+document.querySelectorAll('.carousel-wrapper').forEach(wrapper => {
+  wrapper.querySelector('.carousel-container').addEventListener('scroll', () => {
+      updateArrows(wrapper.id);
+  });
+});
+
+// Initialize arrows visibility on page load
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.carousel-wrapper').forEach(wrapper => {
+      updateArrows(wrapper.id);
+  });
+});
