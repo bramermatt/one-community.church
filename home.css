@@ -860,6 +860,7 @@ nav .grid-content .pd-15 h1 {
     scroll-snap-align: start;
 
     text-align: center;
+    margin-right: 20px;
 
     p {
         max-width: 550px !important;
@@ -872,7 +873,7 @@ nav .grid-content .pd-15 h1 {
 
 
 .carousel-slide img {
-    max-width: 100%;
+    max-width: 98%;
     max-height: 70vh;
     object-fit: contain;
     border-radius: 10px;
@@ -917,7 +918,7 @@ nav .grid-content .pd-15 h1 {
     border: none;
     padding: 10px;
     cursor: pointer;
-    z-index: 1000;
+    z-index: 10;
 
     font-size: 20px;
 }
@@ -943,9 +944,17 @@ nav .grid-content .pd-15 h1 {
     }
 
     .carousel-slide {
+        
+
         h2 {
             text-align: left !important;
         }
+
+        
+    }
+
+    .carousel-slide img {
+        max-width: 95%;
     }
 
 }
