@@ -1516,10 +1516,11 @@ section img {
     padding: 10px;
     color: white;
     font-weight: bold;
-    /* font-size: 20px; */
+    font-size: 35px;
     transition: 0.2s ease;
     user-select: none;
     border-radius: 10px;
+    background-color: rgba(0,0,0,0.9);
 }
 
 .next {
@@ -1631,7 +1632,11 @@ section img {
     }
 
     .prev, .next {
-        bottom: 0vh;
+        bottom: 5vh;
+    }
+
+    .gallery-item:hover {
+        transform: scale(1);
     }
     
 }
