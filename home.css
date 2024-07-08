@@ -1035,7 +1035,7 @@ nav .grid-content .pd-15 h1 {
 
 .profile img {
     max-height: 300px;
-    max-width: 100%;
+    /* max-width: 100%; */
     /* width: 100%; */
     object-fit: cover;
     border-radius: 10px;
@@ -1173,7 +1173,7 @@ main img {
     /* max-width: 1400px; */
     margin: 0 auto;
     background-color: rgb(3, 3, 32);
-    padding-bottom: 10vh;
+    /* padding-bottom: 10vh; */
 }
 
 .topic a:link, .topic a:visited, footer a:link, footer a:visited, .mobile-nav a:link, .mobile-nav a:visited, .locate-us a:link, .locate-us a:visited {
@@ -1372,7 +1372,7 @@ section img {
     position: fixed;
     bottom: 20px;
     right: 25px;
-    z-index: 99;
+    z-index: 25;
     border: none;
     outline: none;
     /* color: var(--text); */
@@ -1426,6 +1426,228 @@ section img {
     right: 1.5rem;
   }
 
+
+
+  .gallery {
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    /* object-fit: cover; */
+}
+
+.gallery-item {
+    width: 20%;
+    margin: 0.5%;
+    cursor: pointer;
+    transition: transform 0.2s;
+    object-fit: cover;
+
+    
+
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px grey;
+
+}
+
+.gallery-item h2,
+.gallery-item p {
+    display: none;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.galleryModal {
+    display: none;
+    position: fixed;
+    z-index: 99;
+    padding-top: 90px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.95);
+}
+
+.modal-open {
+    overflow: hidden;
+}
+
+
+.gallery-modal-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    max-width: 95vw;
+}
+
+.gallery-modal-content {
+    position: relative;
+    display: block;
+    width: 100%;
+    max-height: 80vh;
+}
+
+.gallery-modal-image {
+    width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: fixed;
+    bottom: 10vh;
+    z-index: 10;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    /* font-size: 20px; */
+    transition: 0.2s ease;
+    user-select: none;
+    border-radius: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(80, 80, 80, 0.6);
+}
+
+#galleryCaption {
+    color: white;
+    padding: 10px 0;
+    max-width: 550px;
+    margin: 0 auto;
+    position: relative;
+    bottom: 120px;
+    background: rgb(0, 0, 0, .8);
+    box-shadow: 2px 2px 5px rgb(0, 0, 0, .8);
+    padding: 12px;
+    border-radius: 8px;
+    z-index: 10;
+}
+
+#galleryCaption h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+#galleryCaption p {
+    margin: 5px 0 0;
+    font-size: 16px;
+}
+
+
+
+.close {
+    position: fixed;
+    top: 95px;
+    z-index: 500;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.gallery-dots-container {
+    text-align: center;
+    padding: 10px;
+    padding-inline: 40px;
+    position: fixed;
+    bottom: 2vh;
+    left: 0;
+    right: 0;
+    z-index: 5;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #414141;
+}
+
+@media screen and (max-width: 1000px) {
+    #galleryCaption {
+        bottom: 0vh;
+    }
+
+    .gallery {
+        flex-direction: column;
+        /* overflow: hidden; */
+    }
+
+    .galleryModal {
+        padding-top: 150px;
+        padding-bottom: 100px;
+    }
+
+    .gallery::-webkit-scrollbar {
+        display: none;
+        visibility: hidden;
+    }
+
+    .gallery-item {
+        width: 75%;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+
+    .prev, .next {
+        bottom: 0vh;
+    }
+    
+}
+
+@media screen and (max-width: 350px) {
+    
+    .close {
+        top: 10px;
+    }
+
+    .galleryModal {
+        padding-top: 15px;
+    }
+    
+
+}
 
 
 @media screen and (prefers-color-scheme: light) {
