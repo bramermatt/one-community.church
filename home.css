@@ -50,7 +50,7 @@ nav {
     align-items: center;
     /* padding: 10px; */
     padding-inline: 25px;
-    z-index: 9999999 !important;
+    z-index: 100 !important;
     /* width: 100%; */
     /* border-bottom: thin solid #eee; */
 
@@ -1492,8 +1492,8 @@ section img {
 .galleryModal {
     display: none;
     position: fixed;
-    z-index: 99;
-    padding-top: 90px;
+    z-index: 100;
+    padding-top: 10px;
     left: 0;
     top: 0;
     width: 100%;
@@ -1525,7 +1525,7 @@ section img {
 
 .gallery-modal-image {
     width: 100%;
-    max-height: 80vh;
+    max-height: 90vh;
     object-fit: contain;
 }
 
@@ -1563,8 +1563,9 @@ section img {
     padding: 10px 0;
     max-width: 550px;
     margin: 0 auto;
-    position: relative;
-    bottom: 120px;
+    position: fixed;
+    bottom: 10vh;
+    right: 5vw;
     background: rgb(0, 0, 0, .8);
     box-shadow: 2px 2px 5px rgb(0, 0, 0, .8);
     padding: 12px;
@@ -1586,7 +1587,7 @@ section img {
 
 .close {
     position: fixed;
-    top: 95px;
+    top: 15px;
     z-index: 500;
     right: 35px;
     color: #f1f1f1;
@@ -1628,19 +1629,25 @@ section img {
     background-color: #414141;
 }
 
+
 @media screen and (max-width: 1000px) {
     #galleryCaption {
-        bottom: 0vh;
+        bottom: 20vh;
+        /* left: 0; */
+        /* right: 0; */
+        position: fixed;
     }
 
     .gallery {
-        flex-direction: column;
-        /* overflow: hidden; */
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1vh 1vw;
+        padding-inline: 10px;
     }
 
     .galleryModal {
-        padding-top: 150px;
-        padding-bottom: 100px;
+        padding-top: 10vh;
+        /* padding-bottom: 40vh; */
     }
 
     .gallery::-webkit-scrollbar {
@@ -1649,13 +1656,13 @@ section img {
     }
 
     .gallery-item {
-        width: 75%;
+        width: 100%;
         margin: 0 auto;
-        margin-bottom: 10px;
+        /* margin-bottom: 10px; */
     }
 
     .prev, .next {
-        bottom: 5vh;
+        bottom: 0vh;
     }
 
     .gallery-item:hover {
@@ -1757,8 +1764,8 @@ section img {
     }
 
 
-    img, .iframe-container {
-        box-shadow: 2px 2px 4px grey;
+    .iframe-container {
+        box-shadow: 0px 0px 4px grey;
     }
 
     nav img, footer img, section img {
