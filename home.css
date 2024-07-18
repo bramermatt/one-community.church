@@ -212,7 +212,7 @@ nav li a:hover, .mobile-nav li a:hover, nav button:hover, .mobile-nav details a:
 .mobile-nav {
     transition: top 0.3s;
     /* height: 100vh; */
-    z-index: 1000;
+    z-index: 99 !important;
     margin-top: 0;
     padding-left: 0;
     padding-top: 50px;
@@ -234,7 +234,6 @@ nav li a:hover, .mobile-nav li a:hover, nav button:hover, .mobile-nav details a:
     width: 100%;
     max-height: 100%;
     background-color: white; /* Background color */
-    z-index: 1000; /* Ensure it is above other content */
     /* padding: 10px; */
     box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* Optional: Add some shadow for better visibility */
     
@@ -1325,7 +1324,7 @@ section img {
     height: 102vh;
     margin: 0;
     object-fit: cover;
-    overflow: inherit;
+    /* overflow: inherit; */
 }
 
 .title {
@@ -1476,6 +1475,7 @@ section img {
     object-fit: cover;
 
     border-radius: 10px;
+    box-shadow: none !important;
     /* box-shadow: 2px 2px 5px grey; */
 
 }
@@ -1487,6 +1487,8 @@ section img {
 
 .gallery-item:hover {
     transform: scale(1.05);
+    filter:brightness(50%);
+    transition: 0.2s ease;
 }
 
 .galleryModal {
@@ -1527,6 +1529,8 @@ section img {
     width: 100%;
     max-height: 90vh;
     object-fit: contain;
+    
+    box-shadow: none !important;
 }
 
 .prev, .next {
@@ -1764,7 +1768,7 @@ section img {
     }
 
 
-    .iframe-container {
+    .iframe-container, img {
         box-shadow: 0px 0px 4px grey;
     }
 
