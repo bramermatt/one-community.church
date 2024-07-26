@@ -1842,13 +1842,14 @@ section img {
         text-decoration: none;
     }
 
-    nav {
+    /* nav {
         background-color: #292929;
-        box-shadow: 0px 0px 3px rgb(78, 78, 78);
-    }
+        
+    } */
 
     .mobile-nav {
-        background-color: rgb(26, 26, 26);
+        /* background-color: rgb(26, 26, 26); */
+        background-color: rgb(2, 2, 36);
     }
 
     .bg_popup div {
@@ -1867,6 +1868,8 @@ section img {
     .topic, footer, body  {
         background-color: rgb(2, 2, 36);
     }
+
+
 
     .title {
         border: thin solid grey;
@@ -1894,6 +1897,18 @@ section img {
         color: white !important;
     }
 
+    nav, .dropdown-content, .active, .title {
+        background-color: rgb(2, 2, 36) !important;
+        box-shadow: 0px 0px 3px rgb(255, 255, 255);
+    }
+
+    nav li a:hover, .dropdown a:hover {
+        background-color: rgb(0, 0, 2);
+    }
+
+    .galleryModal, #galleryCaption, .prev, .next {
+        background-color: rgba(2, 2, 36, 0.9);
+    }
     
 }
 
