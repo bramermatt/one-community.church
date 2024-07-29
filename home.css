@@ -946,7 +946,13 @@ nav .grid-content .pd-15 h1 {
 
 
 
+.content {
 
+    p {
+        margin-bottom: 10vh !important;
+        
+    }
+}
 
 
 
@@ -1021,6 +1027,7 @@ nav .grid-content .pd-15 h1 {
 
     p {
         max-width: 550px;
+        line-height: 1.5em;
     }
 
 
