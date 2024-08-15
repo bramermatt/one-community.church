@@ -653,7 +653,7 @@ details summary {
     width: max-content;
     max-width: 65vw;
     /* height: 100%; */
-    top: 75px;
+    top: 65px;
     right: 160px;
     /* right: 20px; */
     /* margin: -4px; */
@@ -1113,7 +1113,7 @@ nav .grid-content .pd-15 h1 {
 
 
 .hero {
-    max-width: 1100px;
+    max-width: 1000px;
     margin: 0 auto;
 
     h2 {
@@ -1909,6 +1909,10 @@ section img {
         box-shadow: 0px 0px 3px rgb(255, 255, 255);
     }
 
+    body {
+        background-color: rgb(2, 2, 36) !important;
+    }
+
     nav li a:hover, .dropdown a:hover {
         background-color: rgb(0, 0, 2);
     }
@@ -2147,6 +2151,10 @@ section img {
 
     }
 
+    nav {
+        margin-inline:10px !important;
+    }
+
 
 }
 
@@ -2167,3 +2175,10 @@ section img {
 }
 
 
+
+
+nav {
+    top: 0;
+    border-radius: 0 0 10px 10px;
+
+}
