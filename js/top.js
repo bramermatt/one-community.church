@@ -6,9 +6,9 @@
         
         function scrollFunction() {
           if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
-            mybutton.style.display = "block";
+            myBtn.style.display = "block";
           } else {
-            mybutton.style.display = "none";
+            myBtn.style.display = "none";
           }
         }
         

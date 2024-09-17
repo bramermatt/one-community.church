@@ -2,6 +2,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const menu = document.getElementById('mobile-nav');
   const icon = document.getElementById('menu-icon');
 
+  // Ensure the menu and icon are correctly selected
+  if (!menu || !icon) {
+    console.error('Mobile menu or icon not found.');
+    return;
+  }
+
   function closeDetails() {
     document.querySelectorAll('.mobile-nav details[open]').forEach(detail => {
       detail.removeAttribute('open');
@@ -29,9 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
       behavior: 'smooth'
     });
   }
-
-  // matt was here
-
 
   // Close menu when a menu item is clicked
   document.querySelectorAll('.mobile-nav a').forEach(item => {

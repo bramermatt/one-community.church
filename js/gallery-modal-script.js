@@ -19,6 +19,9 @@ function openGalleryModal(galleryId, index) {
     updateGalleryDots();
     galleryModal.style.display = 'block';
     document.body.classList.add('modal-open');
+    
+    // Scroll to the top when opening the modal
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 // Function to close the modal
