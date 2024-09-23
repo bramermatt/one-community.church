@@ -1,6 +1,3 @@
-
-
-
 document.addEventListener("DOMContentLoaded", function() {
 
     // Determine the basePath based on the current path
@@ -247,6 +244,12 @@ const footerHTML = `
             <p><i class="fa fa-street-view"></i>  <a href="https://maps.app.goo.gl/91r3VdJow4SGdpqM8" target="_blank">1810 Blackiston Mill Road, Clarksville, IN, 47129</a></p>
         </div>
 
+        <div class="pd-15">
+            <h1>Follow Us</h1>
+            <p><i class="fa-brands fa-youtube"></i>  <a href="https://www.youtube.com/@OneCommunityChurchIndiana" target="_blank">on YouTube</a></p>
+            <p><i class="fa-brands fa-facebook"></i>  <a href="https://www.facebook.com/onecommunitychurch" target="_blank">on Facebook</a></p>
+        </div>
+
 
 
 
@@ -258,17 +261,14 @@ const footerHTML = `
 
 </footer>`
                 
-    // Function to inject the navbar HTML
-    function injectNavbarAndFooter() {
-        document.body.innerHTML = navbarHTML + document.body.innerHTML + footerHTML; // Inject the navbar at the top and the footer at the bottom
-    }
-
-    // Call the function to inject the navbar
-    injectNavbarAndFooter();
-
-
-
-
+    // Append navbar and footer safely
+    document.body.insertAdjacentHTML('afterbegin', navbarHTML);
+    document.body.insertAdjacentHTML('beforeend', footerHTML);
 });
 
+// Dropdown toggle function
+function toggleDropdown(dropdownId, button) {
+    const dropdown = document.getElementById(dropdownId);
+    dropdown.classList.toggle('show');
+}
 

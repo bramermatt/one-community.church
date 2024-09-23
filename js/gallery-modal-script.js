@@ -17,11 +17,16 @@ function openGalleryModal(galleryId, index) {
     currentGallerySlide = index;
     updateModalContent();
     updateGalleryDots();
+    
     galleryModal.style.display = 'block';
+    galleryModal.style.zIndex = 9999; // Force modal to the front
     document.body.classList.add('modal-open');
     
     // Scroll to the top when opening the modal
     window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // Set initial focus inside the modal for accessibility
+    galleryModalImg.focus();
 }
 
 // Function to close the modal
@@ -81,11 +86,34 @@ window.addEventListener('click', function(event) {
 
 // Keyboard navigation for modal gallery slides
 document.addEventListener('keydown', function(event) {
-    if (event.key === 'ArrowLeft') {
-        changeGallerySlide(-1); // Previous slide
-    } else if (event.key === 'ArrowRight') {
-        changeGallerySlide(1); // Next slide
-    } else if (event.key === 'Escape') {
-        closeGalleryModal(); // Close modal on Esc key
+    if (galleryModal.style.display === 'block') { // Ensure modal is open
+        if (event.key === 'ArrowLeft') {
+            changeGallerySlide(-1); // Previous slide
+        } else if (event.key === 'ArrowRight') {
+            changeGallerySlide(1); // Next slide
+        } else if (event.key === 'Escape') {
+            closeGalleryModal(); // Close modal on Esc key
+        }
+    }
+});
+
+// Focus trap for accessibility
+galleryModal.addEventListener('keydown', function(event) {
+    const focusableElements = galleryModal.querySelectorAll('a, button, img, .close');
+    const firstElement = focusableElements[0];
+    const lastElement = focusableElements[focusableElements.length - 1];
+
+    if (event.key === 'Tab') {
+        if (event.shiftKey) { // Shift + Tab
+            if (document.activeElement === firstElement) {
+                lastElement.focus();
+                event.preventDefault();
+            }
+        } else { // Tab
+            if (document.activeElement === lastElement) {
+                firstElement.focus();
+                event.preventDefault();
+            }
+        }
     }
 });
