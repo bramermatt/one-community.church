@@ -763,6 +763,14 @@ nav .grid-content .pd-15 h1 {
     width: 100%;
 }
 
+.grid-two-content-to-one {
+    display: grid;
+    /* grid-template-columns: 1fr 1fr; */
+    grid-template-columns: repeat(2, minmax(auto, auto));
+    gap: 2vw;
+    width: 100%;
+}
+
 
 .grid-three-content {
     display: grid;
@@ -1046,6 +1054,11 @@ nav .grid-content .pd-15 h1 {
         max-width: 550px;
         text-align: left;
     }
+
+    img {
+        max-width: 100%;
+        border-radius: 10px;
+    }
 }
 
 
@@ -1133,6 +1146,10 @@ nav .grid-content .pd-15 h1 {
         margin-left: 0 !important;
         margin-bottom: 40px !important;
         font-size: medium;
+    }
+
+    img {
+        width: 100%;
     }
 }
 
@@ -1701,6 +1718,10 @@ section img {
     }
 
 
+    .grid-two-content-to-one {
+        grid-template-columns: 1fr;
+    }
+
 
 }
 
@@ -1953,6 +1974,13 @@ section img {
 
     #galleryCaption {
         box-shadow: 0px 0px 2px rgb(224, 224, 224);
+    }
+
+
+    .topic a:hover, footer a:hover, .locate-us a:hover {
+        color: #ffffff;
+        text-decoration: none;
+        border-bottom: none;
     }
     
 }

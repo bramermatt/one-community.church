@@ -89,6 +89,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
                         <div class="pd-15">
                             <h1>Recent Events</h1>
+                            <p><a href="${basePath}/index.html#upcoming" rel="noopener noreferrer">Upcoming Events</a></p>
                             <p><a href="${basePath}/index.html#worshipGuides" rel="noopener noreferrer">Worship Guides</a></p>
                             <p><a href="https://www.youtube.com/embed/rD0Jpubf668?si=Xm6nkT1Q7mylww3y" target="_blank">VBS 2024 Highlight Video</a></p>
                         </div>
