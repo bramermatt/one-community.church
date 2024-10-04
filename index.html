@@ -676,6 +676,78 @@
     </div>
 
 
+    <!-- Bootstrap CSS -->
+<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+<!-- Bootstrap JS (for modal functionality) -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script> -->
+
+
+
+<!-- Modal Structure -->
+<!-- <div class="modal fade" id="subscribeModal" tabindex="-1" aria-labelledby="subscribeModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="subscribeModalLabel">Stay up to date!</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <link media="all" type="text/css" rel="stylesheet" href="https://app.clearstream.io/css/external/form.html.css"/>
+                <div class="cs_html_form_container">
+                    <p class="cs_html_form_subtitle">Fill out the form to receive our text alerts.</p>
+                    <form class="cs_html_form" action="https://opturl.com/h/oZY07adR" method="post" id="cs_html_form_oZY07adR" target="_blank">
+                        <div class="cs_html_form_result"></div>
+                        <div class="cs_html_form_error"></div>
+                        <div class="cs_html_form_row">
+                            <input type="text" name="mobile_number" placeholder="Mobile Number *" data-country="US"/>
+                        </div>
+                        <div class="cs_html_form_row">
+                            <input type="text" name="first" placeholder="First Name"/>
+                        </div>
+                        <div class="cs_html_form_row">
+                            <input type="text" name="last" placeholder="Last Name"/>
+                        </div>
+                        <div class="cs_html_form_row">
+                            <input type="text" name="email" placeholder="Email Address"/>
+                        </div>
+                        <div class="cs_html_form_row">
+                            <button type="submit">Subscribe</button>
+                        </div>
+                        <p class="cs_html_form_terms">Message & data rates may apply. Message frequency varies. <a href="http://clst.io/terms">Terms of use</a> and <a href="http://clst.io/privacy">privacy policy</a>. To opt-out, text STOP at any time. <a href="https://clearstream.io">Church software by Clearstream.</a></p>
+                    </form>
+                </div>
+                <script src="https://app.clearstream.io/js/external/form.html.js"></script>
+                <script type="text/javascript">var $csj = jQuery.noConflict(true);</script>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+
+<!-- <div class="topic pd-15">
+    <link media="all" type="text/css" rel="stylesheet" href="https://app.clearstream.io/css/external/form.html.css"/>
+    <div class="cs_html_form_container">
+        <h2>Stay up to date!</h2>
+        <p class="cs_html_form_subtitle">Fill out the form to receive our text alerts.</p>
+        <form class="cs_html_form" action="https://opturl.com/h/oZY07adR" method="post" id="cs_html_form_oZY07adR" target="_blank">
+            <div class="cs_html_form_result"></div>
+            <div class="cs_html_form_error"></div>
+            <div class="cs_html_form_row"><input type="text" name="mobile_number" placeholder="Mobile Number *" data-country="US"/></div>
+            <div class="cs_html_form_row"><input type="text" name="first" placeholder="First Name"/></div>
+            <div class="cs_html_form_row"><input type="text" name="last" placeholder="Last Name"/></div>
+            <div class="cs_html_form_row"><input type="text" name="email" placeholder="Email Address"/></div>
+            <div class="cs_html_form_row">
+                <button type="submit">Subscribe</button>
+            </div>
+            <p class="cs_html_form_terms">Message &amp; data rates may apply. Message frequency varies. <a href="http://clst.io/terms">Terms of use</a> and <a href="http://clst.io/privacy">privacy policy</a>. To opt-out, text STOP at any time. <a href="https://clearstream.io">Church software by Clearstream.</a></p>
+        </form>
+    </div>
+    <script src="https://app.clearstream.io/js/external/form.html.js"></script>
+    <script type="text/javascript">var $csj = jQuery.noConflict(true);</script>
+</div> -->
+
+
 
 
 
@@ -714,10 +786,23 @@
 </footer> -->
 
 
-
+    <div class="thumbButtons">
 
         <span onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up"></i></span>
-        <script src="js/top.js"></script>
+        
+        <!-- Add the icon button that will trigger the modal -->
+        <a href="#" id="openModal">
+            <i class="fa-solid fa-bell"></i>
+        </a>
+
+
+    </div>
+
+    <script src="js/top.js"></script>
+    <script src="js/clearstreamForm.js"></script>
+
+
+
 
         <script src="js/navbarFooter.js"></script>
         <script src="js/mobile-menu.js"></script>
