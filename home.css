@@ -1441,15 +1441,15 @@ section img {
 
   .thumbButtons {
     position: fixed;
-    bottom: 2vh;
-    right: 2vw;
+    bottom: 5vh;
+    right: 1vw;
 
     display: flex;
     align-items: center;
     gap: 1vw;
 
     i {
-        font-size: 4vh;
+        font-size: 3vh;
 
         background-color: rgb(80, 80, 80);
         padding: .5em;
@@ -2297,6 +2297,14 @@ section img {
 
     .mobile-cal {
         display: none;
+    }
+
+    .thumbButtons {
+        bottom: 2vh;
+        right: 2vw;
+        i {
+            font-size: 3vh;
+        }
     }
 
 
