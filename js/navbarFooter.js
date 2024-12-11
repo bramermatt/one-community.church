@@ -16,7 +16,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 <li><a href="#">Sign up for VBS 2024</a></li>
             </ul>
             <ul class="nav-desktop">
-                <li><a href="${basePath}pages/about-us.html">About Us</a></li>
+                <li><a href="${basePath}pages/about-us.html">About</a></li>
+                <li><a href="${basePath}pages/sermons.html">Sermons</a></li>
                 <li><a href="${basePath}pages/ministries.html">Ministries</a></li>
                 <li class="dropdown" id="services">
                     <button class="dropbtn" onclick="toggleDropdown('dropDown1', this)">Services <i class="fa fa-arrow-down" aria-hidden="true"></i></button>
@@ -152,6 +153,11 @@ document.addEventListener("DOMContentLoaded", function() {
                     <p><a href="${basePath}/pages/about-us.html#meet-our-pastors">Meet Our Pastors</a></p>
                     <p><a href="${basePath}/pages/about-us.html#meet-our-staff">Meet Our Staff</a></p>
                     <p><a href="${basePath}/pages/about-us.html#our-history">Our History</a></p>
+                </div>
+
+                <div class="pd-15">
+                <h1>More Sermons</h1>
+                <p><a href="${basePath}pages/sermons.html">Watch Our Sermons</a></p>
                 </div>
 
                 

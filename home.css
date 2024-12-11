@@ -346,6 +346,7 @@ footer {
     position: relative;
     bottom: 0;
     padding: 50px;
+    padding-top: 20vh;
     /* padding-bottom: 50px; */
     /* text-align: center; */
     /* border-top: thin solid; */
@@ -380,6 +381,23 @@ footer {
         margin-right: 10px;
     }
     
+}
+
+
+#button {
+    background-color: rgb(105, 105, 105);
+    padding: 1em;
+    border-radius: 10px;
+    color: white;
+
+    text-decoration: none;
+    
+
+}
+
+#button:hover {
+    background-color: rgb(206, 206, 206);
+    color: black;
 }
 
 
@@ -2137,7 +2155,7 @@ section img {
 }
 
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
 
     .grid-three-content, .grid-four-content, .grid-four-two-content {
         grid-template-columns: repeat(2, minmax(auto, auto));
