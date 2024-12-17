@@ -50,7 +50,7 @@ nav {
     align-items: center;
     /* padding: 10px; */
     padding-inline: 25px;
-    z-index: 100 !important;
+    z-index: 999 !important;
     /* width: 100%; */
     /* border-bottom: thin solid #eee; */
 
@@ -564,6 +564,8 @@ blockquote {
     font-size: 14px;
     line-height: 1.5;
     margin-left: 10px;
+
+    margin-bottom: 5vh;
 }
 
 details {
@@ -777,7 +779,7 @@ nav .grid-content .pd-15 h1 {
     display: grid;
     /* grid-template-columns: 1fr 1fr; */
     grid-template-columns: repeat(2, minmax(auto, auto));
-    gap: 2vw;
+    gap: 1vw;
     width: 100%;
 }
 
@@ -1042,7 +1044,17 @@ nav .grid-content .pd-15 h1 {
 .pd-15 {
     padding: 15px;
 
+    img {
+        max-width: 100%;
+    }
 
+    h3 {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        font-size: medium;
+        line-height: 1.5em;
+        font-weight: 600;
+    }
 
 
     h2 {
@@ -1327,6 +1339,7 @@ main img {
     text-transform: uppercase;
     font-size: medium;
     font-weight: 500;
+    line-height: 1.5em;
 }
 
 .grid-item p {
