@@ -1095,7 +1095,7 @@ nav .grid-content .pd-15 h1 {
 
 .profile {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr;
     /* justify-content: start; */
     gap: 1vw;
     /* width: 100%; */
