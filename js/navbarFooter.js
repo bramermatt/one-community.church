@@ -169,7 +169,7 @@ document.addEventListener("DOMContentLoaded", function() {
         
                 <div class="pd-15">
                     <h1>Connect With Us</h1>
-                    <p><a href="https://docs.google.com/forms/d/e/1FAIpQLScMjB4WOonUZl6GeC7wZnYWrJmF5OTvE_90fhHpiu9AJBHWNQ/viewform" target="_blank">Connect With Us!</a></p>
+                    <p><a href="https://forms.gle/z1sbVFocRktp73KZ8" target="_blank">Connect With Us!</a></p>
                 </div>
 
                 <div class="pd-15">
@@ -224,7 +224,7 @@ const footerHTML = `
 
         <div class="pd-15">
             <h1>Connect With Us</h1>
-            <p><a href="https://docs.google.com/forms/d/e/1FAIpQLScMjB4WOonUZl6GeC7wZnYWrJmF5OTvE_90fhHpiu9AJBHWNQ/viewform" target="_blank">Connect With Us!</a></p>
+            <p><a href="https://forms.gle/z1sbVFocRktp73KZ8" target="_blank">Connect With Us!</a></p>
         </div>
 
         <div class="pd-15">
