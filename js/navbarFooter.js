@@ -169,8 +169,13 @@ document.addEventListener("DOMContentLoaded", function() {
         
                 <!-- <div class="pd-15">
                     <h1>Connect With Us</h1>
+<<<<<<< HEAD
                     <p><a href="https://docs.google.com/forms/d/e/1FAIpQLScMjB4WOonUZl6GeC7wZnYWrJmF5OTvE_90fhHpiu9AJBHWNQ/viewform" target="_blank">Connect With Us!</a></p>
                 </div> -->
+=======
+                    <p><a href="https://forms.gle/z1sbVFocRktp73KZ8" target="_blank">Connect With Us!</a></p>
+                </div>
+>>>>>>> ed5a62fed3433026c7b4fb87fdf450a95422de4c
 
                 <div class="pd-15">
                     <h1>Support Our Ministry</h1>
@@ -224,8 +229,13 @@ const footerHTML = `
 
         <!-- <div class="pd-15">
             <h1>Connect With Us</h1>
+<<<<<<< HEAD
             <p><a href="https://docs.google.com/forms/d/e/1FAIpQLScMjB4WOonUZl6GeC7wZnYWrJmF5OTvE_90fhHpiu9AJBHWNQ/viewform" target="_blank">Connect With Us!</a></p>
         </div> -->
+=======
+            <p><a href="https://forms.gle/z1sbVFocRktp73KZ8" target="_blank">Connect With Us!</a></p>
+        </div>
+>>>>>>> ed5a62fed3433026c7b4fb87fdf450a95422de4c
 
         <div class="pd-15">
             <h1>Support Our Ministry</h1>
