@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
                         <div class="pd-15">
                             <h1>Recent Events</h1>
-                            <p><a href="${basePath}/index.html#recent-events" rel="noopener noreferrer">Recent Events</a></p>
+                            <p><a href="${basePath}index.html#recent-events" rel="noopener noreferrer">Recent Events</a></p>
                             <!-- <h1>Recent Events</h1>
                             <p><a href="${basePath}/index.html#worshipGuides" rel="noopener noreferrer">Worship Guides</a></p> 
                             <p><a href="https://www.youtube.com/embed/rD0Jpubf668?si=Xm6nkT1Q7mylww3y" target="_blank">VBS 2024 Highlight Video</a></p> -->
@@ -167,10 +167,10 @@ document.addEventListener("DOMContentLoaded", function() {
                     <p><a href="mailto:pastoronecommunity@gmail.com?subject=Prayer%20Request" target="_blank" rel="noopener noreferrer">Prayer Request</a></p>
                 </div>
         
-                <div class="pd-15">
+                <!-- <div class="pd-15">
                     <h1>Connect With Us</h1>
                     <p><a href="https://docs.google.com/forms/d/e/1FAIpQLScMjB4WOonUZl6GeC7wZnYWrJmF5OTvE_90fhHpiu9AJBHWNQ/viewform" target="_blank">Connect With Us!</a></p>
-                </div>
+                </div> -->
 
                 <div class="pd-15">
                     <h1>Support Our Ministry</h1>
@@ -222,10 +222,10 @@ const footerHTML = `
             <p><a href="mailto:pastoronecommunity@gmail.com?subject=Prayer%20Request" target="_blank" rel="noopener noreferrer">Prayer Request</a></p>
         </div>
 
-        <div class="pd-15">
+        <!-- <div class="pd-15">
             <h1>Connect With Us</h1>
             <p><a href="https://docs.google.com/forms/d/e/1FAIpQLScMjB4WOonUZl6GeC7wZnYWrJmF5OTvE_90fhHpiu9AJBHWNQ/viewform" target="_blank">Connect With Us!</a></p>
-        </div>
+        </div> -->
 
         <div class="pd-15">
             <h1>Support Our Ministry</h1>

@@ -1068,6 +1068,11 @@ nav .grid-content .pd-15 h1 {
         line-height: 1.5em;
     }
 
+    a:link, a:visited {
+        color: var(--text);
+        /* text-decoration: dashed; */
+    }
+
 
 }
 
@@ -1096,6 +1101,8 @@ nav .grid-content .pd-15 h1 {
 .profile {
     display: grid;
     grid-template-columns: 1fr 1fr;
+
+    display: flex;
     /* justify-content: start; */
     gap: 1vw;
     /* width: 100%; */
@@ -1251,7 +1258,7 @@ main img {
     /* padding-bottom: 10vh; */
 }
 
-.topic a:link, .topic a:visited, footer a:link, footer a:visited, .mobile-nav a:link, .mobile-nav a:visited, .locate-us a:link, .locate-us a:visited {
+.topic a:link, .topic a:visited, footer a:link, footer a:visited, .mobile-nav a:link, .mobile-nav a:visited, .locate-us a:link, .locate-us a:visited, .pd-15 a:link, .pd-15 a:visited {
     color: #7a7a7a;
     text-decoration: none;
     border-bottom: 1.5px dashed #7a7a7a;
@@ -1262,7 +1269,7 @@ main img {
     line-height: 1.5em;
 }
 
-.topic a:hover, footer a:hover, .locate-us a:hover{
+.topic a:hover, footer a:hover, .locate-us a:hover, .pd-15 a:hover {
     color: #d6d6d6;
     text-decoration: none;
     border-bottom: none;
