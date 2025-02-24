@@ -1103,12 +1103,17 @@ nav .grid-content .pd-15 h1 {
     grid-template-columns: 1fr 1fr;
 
     display: flex;
+    flex-wrap: wrap;
     /* justify-content: start; */
     gap: 1vw;
     /* width: 100%; */
     /* align-content: space-between; */
     margin-top: 15px;
     align-items: center;
+
+    .profile-name {
+        max-width: 50%;
+    }
 }
 
 .profile img {
