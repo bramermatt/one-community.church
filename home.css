@@ -107,6 +107,8 @@ nav ul {
     list-style-type: none;
     float: right;
     padding: 0;
+
+    margin: .8em 0;
 }
 
 .dropdown-content .grid-content ul, .grid-content ol {
