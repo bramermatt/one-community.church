@@ -122,7 +122,7 @@ nav ul {
 }
 
 nav li, nav button {
-    font-weight: 200;
+    /* font-weight: 200; */
 }
 
 nav li a, .mobile-nav li a, .footer-tree li a, nav button {
@@ -1195,7 +1195,15 @@ nav .grid-content .pd-15 h1 {
     img {
         width: 100%;
     }
+
+
 }
+
+    #upcoming {
+        a img:hover {
+            opacity: 80%;
+        }
+    }
 
 
 /* Mobile menu styles */
@@ -2378,8 +2386,28 @@ nav {
         grid-template-columns: repeat(1, minmax(auto, auto));
     }
 
+    .grid-content {
+        padding: 2vw;
+    }
+
     section img {
-        height: 50vh;
+        height: 40vh;
+    }
+
+    section {
+        .title {
+            margin-top: 0;
+        }
+    }
+
+    .topic h1 {
+        margin-top: 0;
+    }
+
+    .hero {
+        h2 {
+            margin-top: 2vh;
+        }
     }
 
     #event-calendar {
