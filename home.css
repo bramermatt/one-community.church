@@ -2391,7 +2391,10 @@ nav {
     }
 
     section img {
-        height: 40vh;
+        height: 80vh;
+        position: relative;
+        top: -20px;
+        border-radius: 10px;
     }
 
     section {
@@ -2406,7 +2409,7 @@ nav {
 
     .hero {
         h2 {
-            margin-top: 2vh;
+            /* margin-top: 2vh; */
         }
     }
 
@@ -2432,7 +2435,7 @@ nav {
         border-radius: 0 !important;
         box-shadow: none !important;
         border: none !important;
-        background-color: none !important;
+        background-color:transparent !important;
         
         h1 {
             line-height: 1.3;
