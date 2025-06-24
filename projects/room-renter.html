@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TESTING | Room Renter</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='black' d='M152 64c0-13.3-10.7-24-24-24s-24 10.7-24 24v24H56C25.1 88 0 113.1 0 144v48h448v-48c0-30.9-25.1-56-56-56h-48V64c0-13.3-10.7-24-24-24s-24 10.7-24 24v24H152V64zm296 128H0v240c0 30.9 25.1 56 56 56h336c30.9 0 56-25.1 56-56V192z'/%3E%3C/svg%3E">
+</head>
+<body>
+
+<div id="background-image" class="fixed inset-0 z-0 bg-cover bg-center transition-all duration-500"></div>
+
+ <div class="relative z-10 max-w-md lg:mx-auto mt-10 p-6 lg:border lg:border-gray-300 rounded-2xl shadow-xl bg-white bg-opacity-90 sm:mx-0 sm:p-4 sm:border-0">
+    <div class="flex justify-center mb-4">
+        <img src="../img/occ-favicon.png" alt="" style="filter:invert(100%); max-width: 100%; height: 8vh;">
+    </div>
+  <h2 class="text-2xl font-semibold mb-6 text-center">Room Renter</h2>
+
+  <form class="space-y-4">
+<!-- Only paste this inside your <form class="space-y-4"> -->
+
+<!-- Date Picker (visible by default) -->
+<div id="step-date">
+    <label for="date" class="block font-medium text-gray-700">Date:</label>
+    <div class="relative flex items-center">
+        <input type="text" id="date" name="date" placeholder="Select Date(s)" class="mt-1 w-full rounded-lg border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 pr-10 p-2" />
+        <span class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 pointer-events-none flex items-center h-full">
+            <i class="fas fa-calendar-alt text-lg"></i>
+        </span>
+    </div>
+</div>
+
+<!-- Room Picker -->
+<div id="room-section" class="hidden">
+  <label for="room" class="block font-medium text-gray-700">Room:</label>
+  <div class="relative">
+    <select id="room" name="room" class="mt-1 w-full rounded-lg border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 pr-10  p-2">
+      <option value="" disabled selected>Choose Room</option>
+      <option>Fellowship Hall</option>
+      <option>Gymnasium</option>
+    </select>
+    <div class="absolute right-3 top-3 text-gray-500 pointer-events-none">
+      <i class="fas fa-door-open"></i>
+    </div>
+  </div>
+</div>
+
+<!-- Time Picker -->
+<div id="time-section" class="flex gap-4 hidden">
+  <div class="w-1/2">
+    <label for="start-time" class="block font-medium text-gray-700">Start Time:</label>
+    <div class="relative">
+      <input type="time" id="start-time" name="start-time" class="mt-1 w-full rounded-lg border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 pr-10 p-2" />
+      <div class="absolute inset-y-0 right-3 flex items-center text-gray-500 pointer-events-none h-full">
+        <i class="fas fa-clock"></i>
+      </div>
+    </div>
+  </div>
+  <div class="w-1/2">
+    <label for="duration" class="block font-medium text-gray-700">Duration:</label>
+    <div class="relative">
+      <select id="duration" name="duration" class="mt-1 w-full rounded-lg border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 pr-10 p-2">
+        <option value="2">2 hours</option>
+        <option value="4">4 hours</option>
+        <option value="6">6 hours</option>
+      </select>
+    <div class="absolute inset-y-0 right-3 flex items-center text-gray-500 pointer-events-none h-full">
+      <i class="fas fa-hourglass-half"></i>
+    </div>
+    </div>
+  </div>
+</div>
+
+<!-- Out Time Label -->
+<div id="out-time-label" class="mt-2 text-blue-700 font-semibold hidden">
+  You need to be out by <span id="out-time"></span>
+</div>
+
+<!-- Name -->
+<div id="name-section" class="hidden">
+  <label for="name" class="block font-medium text-gray-700">Name:</label>
+  <input type="text" id="name" name="name" placeholder="John Doe" class="mt-1 w-full rounded-lg border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 p-2" required/>
+</div>
+
+<!-- Email -->
+<div id="email-block" class="hidden">
+  <label for="email" class="block font-medium text-gray-700">Email:</label>
+  <input type="email" id="email" name="email" placeholder="john@email.com" class="mt-1 w-full rounded-lg border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 p-2" required/>
+</div>
+
+<!-- Purpose -->
+<div id="purpose-block" class="hidden">
+  <label for="purpose" class="block font-medium text-gray-700">Purpose:</label>
+  <input type="text" id="purpose" name="purpose" placeholder="Baby Shower" class="mt-1 w-full rounded-lg border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 p-2" required />
+</div>
+
+<!-- Buttons -->
+<div id="action-buttons" class="flex flex-row gap-3 mt-6 hidden">
+  <button type="button" class="w-full py-2 px-4 bg-yellow-400 hover:bg-yellow-500 text-white font-semibold rounded-xl shadow-md transition">
+    <i class="fas fa-search mr-2"></i> Check Availability
+  </button>
+  <button type="submit" class="w-full py-2 px-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl shadow-md transition">
+    <i class="fas fa-credit-card mr-2"></i> Book & Pay
+  </button>
+</div>
+
+  </form>
+</div>
+
+<style>
+
+#background-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(2px);
+}
+
+
+@media screen and (max-width: 640px) {
+  /* .sm\:rounded-none { border-radius: 0 !important; } */
+  /* .sm\:mx-0 { margin-left: 0 !important; margin-right: 0 !important; } */
+  /* .sm\:mt-0 { margin-top: 0 !important; } */
+  /* .sm\:p-4 { padding: 1rem !important; } */
+  
+  .sm\:border-0 { border-width: 0 !important; }
+  .mt-10 { margin-top: 0 !important; }
+  .sm\:mx-0 { margin: 10px !important;}
+}
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const roomSection = document.getElementById("room-section");
+  const timeSection = document.getElementById("time-section");
+  const nameSection = document.getElementById("name-section");
+  const emailSection = document.getElementById("email-block");
+  const purposeSection = document.getElementById("purpose-block");
+  const outLabel = document.getElementById("out-time-label");
+  const buttons = document.getElementById("action-buttons");
+
+  const backgroundImage = document.getElementById("background-image");
+const roomSelect = document.getElementById("room");
+
+roomSelect.addEventListener("change", () => {
+  const room = roomSelect.value;
+
+  let imageUrl = "";
+
+  switch (room) {
+    case "Fellowship Hall":
+      imageUrl = "url('../img/facilities/fellowshipHall.JPG')";
+      break;
+    case "Gymnasium":
+      imageUrl = "url('../img/facilities/flc-1.jpeg')";
+      break;
+    default:
+      imageUrl = "";
+  }
+
+  backgroundImage.style.backgroundImage = imageUrl;
+});
+
+
+  
+
+  flatpickr("#date", {
+    minDate: "today",
+    dateFormat: "Y-m-d",
+    disable: ["2025-07-01", "2025-07-02"],
+    onDayCreate: function(dObj, dStr, fp, dayElem) {
+      const disabledDates = ["2025-07-01", "2025-07-02"];
+      const dateString = dayElem.dateObj.toISOString().split('T')[0];
+      if (disabledDates.includes(dateString)) {
+        dayElem.classList.add("bg-gray-300", "text-gray-500", "cursor-not-allowed");
+      }
+    },
+    onChange: () => {
+      roomSection.classList.remove("hidden");
+    }
+  });
+
+  document.getElementById("room").addEventListener("change", () => {
+    timeSection.classList.remove("hidden");
+  });
+
+  function updateOutTime() {
+    const startTime = document.getElementById("start-time").value;
+    const duration = parseInt(document.getElementById("duration").value, 10);
+    const outTimeSpan = document.getElementById("out-time");
+
+    if (startTime && duration) {
+      const [hours, minutes] = startTime.split(":").map(Number);
+      const end = new Date();
+      end.setHours(hours, minutes, 0, 0);
+      end.setMinutes(end.getMinutes() + duration * 60);
+      outTimeSpan.textContent = `${end.getHours().toString().padStart(2, "0")}:${end.getMinutes().toString().padStart(2, "0")}`;
+
+      outLabel.classList.remove("hidden");
+      nameSection.classList.remove("hidden");
+      emailSection.classList.remove("hidden");
+      purposeSection.classList.remove("hidden");
+      buttons.classList.remove("hidden");
+    } else {
+      outLabel.classList.add("hidden");
+      nameSection.classList.add("hidden");
+      emailSection.classList.add("hidden");
+      purposeSection.classList.add("hidden");
+      buttons.classList.add("hidden");
+    }
+  }
+
+  document.getElementById("start-time").addEventListener("input", updateOutTime);
+  document.getElementById("duration").addEventListener("change", updateOutTime);
+
+    document.querySelector("#action-buttons button[type='button']").addEventListener("click", function (e) {
+  e.preventDefault(); // Prevents page reload or real submission
+
+  // TODO: Validate form or show modal
+  alert("Checking Available!");
+
+  // Example: Show your own modal instead of alert here
+});
+
+  document.querySelector("form").addEventListener("submit", function (e) {
+  e.preventDefault(); // Prevents page reload or real submission
+
+  // TODO: Validate form or show modal
+  alert("Booking submitted! (This is where your payment modal would launch.)");
+
+  // Example: Show your own modal instead of alert here
+});
+
+});
+</script>
+
+
+</body>
+</html>
