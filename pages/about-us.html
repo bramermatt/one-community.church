@@ -17,6 +17,28 @@
 
     <link rel="stylesheet" href="../home.css"> 
 
+    <!-- Tailwind CSS via CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Optional: Enable aspect-ratio and other plugins -->
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: {
+      extend: {
+        colors: {
+          navydeep: 'rgb(2, 2, 36)',
+        },
+      },
+    },
+    plugins: [tailwindcss.aspectRatio],
+  }
+
+  
+
+</script>
+
+
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-G4RP8XPZSK"></script>
 <script>
@@ -38,10 +60,11 @@
 
         <div class="title pd-15">
             <h1>About One Community Church</h1>
+            <p>Our story!</p>
         </div>
     </section>
 
-    <div class="topic pd-15"  id="who-is-occ">
+    <!-- <div class="topic pd-15"  id="who-is-occ">
 
         <h1>Who is One Community Church?!</h1>
         <p>It all started in 2005..</p>
@@ -58,14 +81,28 @@
             <div class="container right">
               <div class="content">
                 <h2>2011</h2>
-                <p>The following summer, we transitioned to Clarksville Elementary School. March 2011 marked a significant new era for HVCC as we welcomed two additional pastors to our staff. Their focus was on addressing the spiritual needs of adults and young adults, ensuring that our growing congregation received comprehensive guidance and support. By fall 2013, we began sharing space with Charity Community Church, a partnership that would lay the groundwork for our future.</p>
+                <p style="margin-bottom: 2vh !important;">The following summer, we transitioned to Clarksville Elementary School. March 2011 marked a significant new era for HVCC as we welcomed two additional pastors to our staff. Their focus was on addressing the spiritual needs of adults and young adults, ensuring that our growing congregation received comprehensive guidance and support. By fall 2013, we began sharing space with Charity Community Church, a partnership that would lay the groundwork for our future.</p>
+
+                <h3>Sermon from that Era</h3>
+                <div class="iframe-container" >
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/r2gsYsOt_WM?si=tK4jjgLpMB4Uf3iN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <blockquote>Religion versus Redemption | Colossians 2:6-7 | Andy Bramer | February 5, 2012</blockquote>
+
               </div>
             </div>
       
             <div class="container left">
               <div class="content">
                 <h2>2014</h2>
-                <p>In the spring of 2014, a milestone event occurred: we officially merged with Charity Community Church, forming One Community Church at 1810 Blackiston Mill Rd. in Clarksville. This merger was a testament to God’s abundant blessings and a reflection of our shared vision for a unified community of believers. Our new location became a beacon of faith, fellowship, and service, and we felt immensely grateful for the journey God had led us on.</p>
+                <p style="margin-bottom: 2vh !important;">In the spring of 2014, a milestone event occurred: we officially merged with Charity Community Church, forming One Community Church at 1810 Blackiston Mill Rd. in Clarksville. This merger was a testament to God’s abundant blessings and a reflection of our shared vision for a unified community of believers. Our new location became a beacon of faith, fellowship, and service, and we felt immensely grateful for the journey God had led us on.</p>
+
+                <h3>Sermon from that Era</h3>
+                <div class="iframe-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/fCAYDUru1lI?si=9V7Oav6zS3O4xktb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <blockquote>How soon we Forget | 1 Kings 19 | Andy Bramer | Dec 14, 2014</blockquote>
+
               </div>
             </div>
 
@@ -83,8 +120,91 @@
         </div>
 
 
+    </div> -->
+
+    
+    <div id="time">
+        <div id="who-is-occ" class="dark:bg-navydeep dark:text-white py-12 px-4 md:px-8">
+  <h1 class="text-4xl font-bold text-center mb-4 text-gray-900 dark:text-white">Who is One Community Church?!</h1>
+  <p class="text-center text-lg text-gray-600 dark:text-gray-300 mb-12">It all started in 2005...</p>
+
+  <div class="relative max-w-6xl mx-auto">
+    <!-- Timeline vertical line (BEHIND content) -->
+    <div class="absolute left-1/2 transform -translate-x-1/2 w-1 bg-yellow-400 h-full z-0"></div>
+
+    <!-- === Timeline Item === -->
+    <div class="mb-16 flex flex-col md:flex-row md:items-center relative z-10">
+      <div class="md:w-1/2 md:pr-10 text-left">
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-gray-900 dark:text-gray-100">
+          <h2 class="text-xl font-semibold mb-2">2005</h2>
+          <p>One Community Church began its journey in October 2005 as Harvest Valley Community Church (HVCC). Our mission was to reach not only the youth of Southern Indiana but also their parents. As our community grew, we found a new home at GRC Elementary School, where we continued to expand our outreach and impact.</p>
+        </div>
+      </div>
+      <div class="hidden md:flex justify-center items-center w-12 h-12 bg-yellow-500 border-4 border-white dark:border-gray-900 rounded-full shadow-lg z-10 mx-auto md:mx-0"></div>
+      <div class="md:w-1/2 hidden md:block"></div>
     </div>
 
+    <!-- === Timeline Item (ALT) === -->
+    <div class="mb-16 flex flex-col md:flex-row-reverse md:items-center relative z-10">
+      <div class="md:w-1/2 md:pl-10 text-left">
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-gray-900 dark:text-gray-100">
+          <h2 class="text-xl font-semibold mb-2">2011</h2>
+          <p class="mb-4">The following summer, we transitioned to Clarksville Elementary School. March 2011 marked a significant new era for HVCC as we welcomed two additional pastors to our staff. Their focus was on addressing the spiritual needs of adults and young adults, ensuring that our growing congregation received comprehensive guidance and support.</p>
+          <p class="mb-4">By fall 2013, we began sharing space with Charity Community Church, a partnership that would lay the groundwork for our future.</p>
+          <h3 class="text-lg font-semibold mt-4">Sermon from that Era</h3>
+          <div class="aspect-w-16 aspect-h-9">
+            <div class="iframe-container">
+            <iframe  src="https://www.youtube.com/embed/r2gsYsOt_WM?si=tK4jjgLpMB4Uf3iN" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+          <blockquote class="italic text-sm text-gray-600 dark:text-gray-400 mt-2">Religion versus Redemption | Colossians 2:6-7 | Andy Bramer | Feb 5, 2012</blockquote>
+        </div>
+      </div>
+      <div class="hidden md:flex justify-center items-center w-12 h-12 bg-yellow-500 border-4 border-white dark:border-gray-900 rounded-full shadow-lg z-10 mx-auto md:mx-0"></div>
+      <div class="md:w-1/2 hidden md:block"></div>
+    </div>
+
+    <!-- === Timeline Item === -->
+    <div class="mb-16 flex flex-col md:flex-row md:items-center relative z-10">
+      <div class="md:w-1/2 md:pr-10 text-left">
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-gray-900 dark:text-gray-100">
+          <h2 class="text-xl font-semibold mb-2">2014</h2>
+          <p class="mb-4">In the spring of 2014, a milestone event occurred: we officially merged with Charity Community Church, forming One Community Church at 1810 Blackiston Mill Rd. in Clarksville. This merger was a testament to God’s abundant blessings and a reflection of our shared vision for a unified community of believers.</p>
+          
+          <p class="mb-4">Our new location became a beacon of faith, fellowship, and service, and we felt immensely grateful for the journey God had led us on.</p>
+          <h3 class="text-lg font-semibold mt-4">Sermon from that Era</h3>
+          <div class="aspect-w-16 aspect-h-9">
+            <div class="iframe-container">
+            <iframe src="https://www.youtube.com/embed/fCAYDUru1lI?si=9V7Oav6zS3O4xktb" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+          <blockquote class="italic text-sm text-gray-600 dark:text-gray-400 mt-2">How soon we Forget | 1 Kings 19 | Andy Bramer | Dec 14, 2014</blockquote>
+        </div>
+      </div>
+      <div class="hidden md:flex justify-center items-center w-12 h-12 bg-yellow-500 border-4 border-white dark:border-gray-900 rounded-full shadow-lg z-10 mx-auto md:mx-0"></div>
+      <div class="md:w-1/2 hidden md:block"></div>
+    </div>
+
+    <!-- === Timeline Item (ALT) === -->
+    <div class="mb-16 flex flex-col md:flex-row-reverse md:items-center relative z-10">
+      <div class="md:w-1/2 md:pl-10 text-left">
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-gray-900 dark:text-gray-100">
+          <h2 class="text-xl font-semibold mb-2">2024 and Beyond</h2>
+          <p class="mb-4">At One Community Church, we are always planning and preparing for the future with a commitment to fulfilling the Great Commission as outlined in Matthew 28:19-20: "Therefore go and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit, and teaching them to obey everything I have commanded you." </p>
+          <p class="mb-4">Our mission is to make disciples, one person at a time, continually expanding our reach and deepening our impact. We believe that the best is yet to come, and we are excited to see how God will use us to bring His love and message to our community and beyond.</p>
+        </div>
+      </div>
+      <div class="hidden md:flex justify-center items-center w-12 h-12 bg-yellow-500 border-4 border-white dark:border-gray-900 rounded-full shadow-lg z-10 mx-auto md:mx-0"></div>
+      <div class="md:w-1/2 hidden md:block"></div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+</div>
+
+    </div>
 
     <div class="topic pd-15" id="meet-our-pastors">
 
