@@ -348,7 +348,7 @@ footer {
     position: relative;
     bottom: 0;
     padding: 50px;
-    padding-top: 20vh;
+    /* padding-top: 20vh; */
     /* padding-bottom: 50px; */
     /* text-align: center; */
     /* border-top: thin solid; */
@@ -2082,6 +2082,7 @@ section img {
 
     .topic, footer, body  {
         background-color: rgb(2, 2, 36);
+        color: white;
     }
 
 

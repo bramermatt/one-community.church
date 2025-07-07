@@ -7,18 +7,18 @@ document.addEventListener("DOMContentLoaded", function() {
     const navbarHTML = `
         <nav>
             <div class="nav-img">
-                <a href="${basePath}index.html"><img src="${basePath}img/occ-favicon.png" alt=""></a>
+                <a href="${basePath}/index.html"><img src="${basePath}/img/occ-favicon.png" alt=""></a>
                 <ul>
-                    <li><a href="${basePath}pages/new-to-occ.html">New to OCC? <i class="fa-solid fa-person-rays"></i></a></li>
+                    <li><a href="${basePath}/pages/new-to-occ.html">New to OCC? <i class="fa-solid fa-person-rays"></i></a></li>
                 </ul>
             </div>
             <ul class="nav-topic">
                 <li><a href="#">Sign up for VBS 2024</a></li>
             </ul>
             <ul class="nav-desktop">
-                <li><a href="${basePath}pages/about-us.html">About</a></li>
-                <!-- <li><a href="${basePath}pages/sermons.html">Sermons</a></li> -->
-                <li><a href="${basePath}pages/ministries.html">Ministries</a></li>
+                <li><a href="${basePath}/pages/about-us.html">About</a></li>
+                <!-- <li><a href="${basePath}/pages/sermons.html">Sermons</a></li> -->
+                <li><a href="${basePath}/pages/ministries.html">Ministries</a></li>
                 <li class="dropdown" id="services">
                     <button class="dropbtn" onclick="toggleDropdown('dropDown1', this)">Services <i class="fa fa-arrow-down" aria-hidden="true"></i></button>
                     <div class="dropdown-content" id="dropDown1">
@@ -35,8 +35,8 @@ document.addEventListener("DOMContentLoaded", function() {
                             </div>
                             <div class="pd-15">
                                 <h1>Stream LIVE</h1>
-                                <p><strong><a href="https://www.youtube.com/@OneCommunityChurchIndiana/live" target="_blank"> <img src="${basePath}img/icon/youtube.png" alt=""></a></strong></p>
-                                <p><strong><a href="https://www.facebook.com/onecommunitychurch" target="_blank"><img src="${basePath}img/icon/facebook.png" alt=""></a></strong></p>
+                                <p><strong><a href="https://www.youtube.com/@OneCommunityChurchIndiana/live" target="_blank"> <img src="${basePath}/img/icon/youtube.png" alt=""></a></strong></p>
+                                <p><strong><a href="https://www.facebook.com/onecommunitychurch" target="_blank"><img src="${basePath}/img/icon/facebook.png" alt=""></a></strong></p>
                             </div>
                             <div class="pd-15">
                                 <h1>In Person</h1>
@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
                         <div class="pd-15">
                             <h1>Recent Events</h1>
-                            <p><a href="${basePath}index.html#recent-events" rel="noopener noreferrer">Recent Events</a></p>
+                            <p><a href="${basePath}/index.html#recent-events" rel="noopener noreferrer">Recent Events</a></p>
                             <!-- <h1>Recent Events</h1>
                             <p><a href="${basePath}/index.html#worshipGuides" rel="noopener noreferrer">Worship Guides</a></p> 
                             <p><a href="https://www.youtube.com/embed/rD0Jpubf668?si=Xm6nkT1Q7mylww3y" target="_blank">VBS 2024 Highlight Video</a></p> -->

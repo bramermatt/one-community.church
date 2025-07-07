@@ -5,242 +5,396 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TESTING | Room Renter</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <meta name="description" content="Book a room at our facility with ease. Select your date, room, time, and purpose.">
+    <meta name="keywords" content="room rental, facility booking, event space, church hall, gymnasium rental">
+    <meta name="author" content="One Community Church">
+
+    <!-- <link rel="stylesheet" href="css/roomRenter-styles.css"> -->
+    <link rel="stylesheet" href="../home.css">
+
+ 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='black' d='M152 64c0-13.3-10.7-24-24-24s-24 10.7-24 24v24H56C25.1 88 0 113.1 0 144v48h448v-48c0-30.9-25.1-56-56-56h-48V64c0-13.3-10.7-24-24-24s-24 10.7-24 24v24H152V64zm296 128H0v240c0 30.9 25.1 56 56 56h336c30.9 0 56-25.1 56-56V192z'/%3E%3C/svg%3E">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Font Awesome CDN -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
+
+    <!-- google font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather">
+ 
 </head>
 <body>
 
-<div id="background-image" class="fixed inset-0 z-0 bg-cover bg-center transition-all duration-500"></div>
+  <style>
+  /* ===== Google Font import (optional) ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
- <div class="relative z-10 max-w-md lg:mx-auto mt-10 p-6 lg:border lg:border-gray-300 rounded-2xl shadow-xl bg-white bg-opacity-90 sm:mx-0 sm:p-4 sm:border-0">
-    <div class="flex justify-center mb-4">
-        <img src="../img/occ-favicon.png" alt="" style="filter:invert(100%); max-width: 100%; height: 8vh;">
-    </div>
-  <h2 class="text-2xl font-semibold mb-6 text-center">Room Renter</h2>
+/* ===== CSS Reset & Base ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  <form class="space-y-4">
-<!-- Only paste this inside your <form class="space-y-4"> -->
+html, body {
+  /* height: 100%; */
+  /* font-family: 'Poppins', sans-serif; */
+  /* color: #f5f7fa; */
+  /* line-height: 1.45; */
+}
 
-<!-- Date Picker (visible by default) -->
-<div id="step-date">
-    <label for="date" class="block font-medium text-gray-700">Date:</label>
-    <div class="relative flex items-center">
-        <input type="text" id="date" name="date" placeholder="Select Date(s)" class="mt-1 w-full rounded-lg border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 pr-10 p-2" />
-        <span class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 pointer-events-none flex items-center h-full">
-            <i class="fas fa-calendar-alt text-lg"></i>
-        </span>
-    </div>
-</div>
+/* ===== Hero / Background image ===== */
+#background-image {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.55) blur(2px);
+  transition: background-image 0.4s ease-in-out;
+  
+}
 
-<!-- Room Picker -->
-<div id="room-section" class="hidden">
-  <label for="room" class="block font-medium text-gray-700">Room:</label>
-  <div class="relative">
-    <select id="room" name="room" class="mt-1 w-full rounded-lg border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 pr-10  p-2">
-      <option value="" disabled selected>Choose Room</option>
-      <option>Fellowship Hall</option>
-      <option>Gymnasium</option>
-    </select>
-    <div class="absolute right-3 top-3 text-gray-500 pointer-events-none">
-      <i class="fas fa-door-open"></i>
-    </div>
+/* ===== Glassy container ===== */
+.room-renter-container {
+  color: white;
+  max-width: 425px;
+  width: 90%;
+  margin: 2rem auto;
+  padding: 2.5rem 2rem 3rem;
+  border-radius: 1.5rem;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px) saturate(135%);
+  -webkit-backdrop-filter: blur(18px) saturate(135%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.45);
+  animation: fade-slide 600ms ease;
+
+  margin-bottom: 25vh;
+}
+
+
+
+/* subtle entrance */
+@keyframes fade-slide {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Logo ===== */
+.logo-container {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 1rem;
+}
+.logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #ffffff40;
+}
+
+/* ===== Form header ===== */
+.form-title {
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+}
+
+/* ===== Inputs / Selects ===== */
+/* .input-icon-group .form-input  {
+  background-color: black;
+} */
+
+.form-label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.35rem;
+  color: #e5e7eb;
+}
+
+.input-icon-group {
+  position: relative;
+  /* background-color: black; */
+}
+
+/* Custom select dropdown */
+.form-input,
+.input-icon-group select {
+  width: 100%;
+  padding: 0.75rem 3rem 0.75rem 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid #ffffff30;
+  background: rgba(255, 255, 255, 0.06);
+  color: #f5f7fa;
+  font-size: 16px; /* Prevents mobile zoom on input/select */
+  transition: border 180ms ease, background 180ms ease;
+}
+
+.input-icon-group select {
+  background-color: rgba(255, 255, 255, 0.1); /* Lighter dropdown background */
+}
+
+.input-icon-group select option {
+  color: #111;
+  background-color: #fff;
+}
+
+
+.form-input:focus {
+  outline: none;
+  border-color: #7ab6ff;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.input-icon {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #9ca3af;
+  font-size: 1rem;
+}
+
+#room-section, .time-section, #name-section, #email-block, #purpose-block {
+  margin-top: 2vh;
+}
+
+/* ===== Time section ===== */
+.time-section {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 2vh;
+}
+.time-half {
+  flex: 1;
+}
+
+/* ===== Out‑time notice ===== */
+.out-time-label {
+  margin-top: 0.5rem;
+  font-size: 0.87rem;
+  background: #2563eb10;
+  border: 1px dashed #60a5fa;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+}
+#out-time {
+  font-weight: 600;
+}
+
+/* ===== Buttons ===== */
+.action-buttons {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+.btn i {
+  font-size: 1rem;
+}
+
+.btn-availability {
+  background: linear-gradient(135deg, #14b8a6, #059669);
+  color: #f0fdf4;
+}
+.btn-book {
+  background: linear-gradient(135deg, #6366f1, #4338ca);
+  color: #eef2ff;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px -6px rgba(0, 0, 0, 0.45);
+}
+
+/* ===== Utility ===== */
+.hidden {
+  display: none !important;
+}
+
+.form-label[for="name"]::after,
+.form-label[for="email"]::after,
+.form-label[for="purpose"]::after {
+  content: " *";
+  color: #f87171;
+  font-weight: bold;
+  margin-left: 2px;
+}
+
+/* ===== Responsive tweaks ===== */
+@media (max-width: 480px) {
+  .room-renter-container {
+    padding: 2rem 1.25rem 2.5rem;
+  }
+  .form-title {
+    font-size: 1.5rem;
+  }
+  .input-icon {
+    font-size: 0.9rem;
+  }
+  .btn {
+    font-size: 0.9rem;
+  }
+}
+
+
+
+</style>
+
+<div id="background-image"></div>
+
+<div class="room-renter-container">
+  <div class="logo-container">
+    <img src="../img/occ-favicon.png" alt="" class="logo-img">
   </div>
-</div>
+  <h2 class="form-title">Room Renter</h2>
+  <p style="margin-bottom: 1.5rem; color: #e5e7eb; font-size: medium; margin-top: 0;line-height: 1.5em;">
+    Reserve your perfect space at <strong>One Community Church</strong> with ease. Select your preferred date, choose from our <strong>Fellowship Hall</strong> or <strong>Gymnasium</strong>, and book the time that fits your needs. Our rooms are available for a variety of events—simply check availability and secure your spot in just a few steps.
+  </p>
 
-<!-- Time Picker -->
-<div id="time-section" class="flex gap-4 hidden">
-  <div class="w-1/2">
-    <label for="start-time" class="block font-medium text-gray-700">Start Time:</label>
-    <div class="relative">
-      <input type="time" id="start-time" name="start-time" class="mt-1 w-full rounded-lg border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 pr-10 p-2" />
-      <div class="absolute inset-y-0 right-3 flex items-center text-gray-500 pointer-events-none h-full">
-        <i class="fas fa-clock"></i>
+  <form class="room-renter-form">
+    <!-- Date Picker (visible by default) -->
+    <div id="step-date">
+      <label for="date" class="form-label">Date:</label>
+      <div class="input-icon-group">
+        <input type="text" id="date" name="date" placeholder="Select Date(s)" class="form-input" />
+        <span class="input-icon">
+          <i class="fas fa-calendar-alt"></i>
+        </span>
       </div>
     </div>
-  </div>
-  <div class="w-1/2">
-    <label for="duration" class="block font-medium text-gray-700">Duration:</label>
-    <div class="relative">
-      <select id="duration" name="duration" class="mt-1 w-full rounded-lg border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 pr-10 p-2">
-        <option value="2">2 hours</option>
-        <option value="4">4 hours</option>
-        <option value="6">6 hours</option>
-      </select>
-    <div class="absolute inset-y-0 right-3 flex items-center text-gray-500 pointer-events-none h-full">
-      <i class="fas fa-hourglass-half"></i>
+
+    <!-- Room Picker -->
+    <div id="room-section" class="hidden">
+      <label for="room" class="form-label">Room:</label>
+      <div class="input-icon-group">
+        <select id="room" name="room" class="form-input">
+          <option value="" disabled selected>Choose Room</option>
+          <option>Fellowship Hall</option>
+          <option>Gymnasium</option>
+        </select>
+        <span class="input-icon">
+          <i class="fas fa-door-open"></i>
+        </span>
+      </div>
     </div>
+
+    <!-- Time Picker -->
+    <div id="time-section" class="hidden time-section">
+      <div class="time-half">
+        <label for="start-time" class="form-label">Start Time:</label>
+        <div class="input-icon-group">
+          <input type="time" id="start-time" name="start-time" class="form-input" />
+          <span class="input-icon">
+            <i class="fas fa-clock"></i>
+          </span>
+        </div>
+      </div>
+      <div class="time-half">
+        <label for="duration" class="form-label">Duration:</label>
+        <div class="input-icon-group">
+          <select id="duration" name="duration" class="form-input">
+            <option value="2">2 hours</option>
+            <option value="4">4 hours</option>
+            <option value="6">6 hours</option>
+          </select>
+          <span class="input-icon">
+            <i class="fas fa-hourglass-half"></i>
+          </span>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
-<!-- Out Time Label -->
-<div id="out-time-label" class="mt-2 text-blue-700 font-semibold hidden">
-  You need to be out by <span id="out-time"></span>
-</div>
+    <!-- Out Time Label -->
+    <div id="out-time-label" class="out-time-label hidden">
+      You need to be out by <span id="out-time"></span>
+    </div>
 
-<!-- Name -->
-<div id="name-section" class="hidden">
-  <label for="name" class="block font-medium text-gray-700">Name:</label>
-  <input type="text" id="name" name="name" placeholder="John Doe" class="mt-1 w-full rounded-lg border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 p-2" required/>
-</div>
+    <!-- Name -->
+    <div id="name-section" class="hidden">
+      <label for="name" class="form-label">Name:</label>
+      <input type="text" id="name" name="name" placeholder="John Doe" class="form-input" required/>
+    </div>
 
-<!-- Email -->
-<div id="email-block" class="hidden">
-  <label for="email" class="block font-medium text-gray-700">Email:</label>
-  <input type="email" id="email" name="email" placeholder="john@email.com" class="mt-1 w-full rounded-lg border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 p-2" required/>
-</div>
+    <!-- Email -->
+    <div id="email-block" class="hidden">
+      <label for="email" class="form-label">Email:</label>
+      <input type="email" id="email" name="email" placeholder="john@email.com" class="form-input" required/>
+    </div>
 
-<!-- Purpose -->
-<div id="purpose-block" class="hidden">
-  <label for="purpose" class="block font-medium text-gray-700">Purpose:</label>
-  <input type="text" id="purpose" name="purpose" placeholder="Baby Shower" class="mt-1 w-full rounded-lg border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 p-2" required />
-</div>
+    <!-- Purpose -->
+    <div id="purpose-block" class="hidden">
+      <label for="purpose" class="form-label">Purpose:</label>
+      <input type="text" id="purpose" name="purpose" placeholder="Baby Shower" class="form-input" required />
+    </div>
 
-<!-- Buttons -->
-<div id="action-buttons" class="flex flex-row gap-3 mt-6 hidden">
-  <button type="button" class="w-full py-2 px-4 bg-yellow-400 hover:bg-yellow-500 text-white font-semibold rounded-xl shadow-md transition">
-    <i class="fas fa-search mr-2"></i> Check Availability
-  </button>
-  <button type="submit" class="w-full py-2 px-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl shadow-md transition">
-    <i class="fas fa-credit-card mr-2"></i> Book & Pay
-  </button>
-</div>
+    <!-- Buttons -->
+    <div id="action-buttons" class="hidden action-buttons">
+      <button type="button" class="btn btn-availability">
+        <i class="fas fa-search"></i> Check Availability
+      </button>
+      <button type="submit" class="btn btn-book">
+        <i class="fas fa-credit-card"></i> Book & Pay
+      </button>
 
+      <div id="notes">Using Square to Charge.. </div>
+    </div>
+
+    
   </form>
 </div>
 
-<style>
-
-#background-image::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(2px);
-}
-
-
-@media screen and (max-width: 640px) {
-  /* .sm\:rounded-none { border-radius: 0 !important; } */
-  /* .sm\:mx-0 { margin-left: 0 !important; margin-right: 0 !important; } */
-  /* .sm\:mt-0 { margin-top: 0 !important; } */
-  /* .sm\:p-4 { padding: 1rem !important; } */
-  
-  .sm\:border-0 { border-width: 0 !important; }
-  .mt-10 { margin-top: 0 !important; }
-  .sm\:mx-0 { margin: 10px !important;}
-}
-</style>
 
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const roomSection = document.getElementById("room-section");
-  const timeSection = document.getElementById("time-section");
-  const nameSection = document.getElementById("name-section");
-  const emailSection = document.getElementById("email-block");
-  const purposeSection = document.getElementById("purpose-block");
-  const outLabel = document.getElementById("out-time-label");
-  const buttons = document.getElementById("action-buttons");
-
-  const backgroundImage = document.getElementById("background-image");
-const roomSelect = document.getElementById("room");
-
-roomSelect.addEventListener("change", () => {
-  const room = roomSelect.value;
-
-  let imageUrl = "";
-
-  switch (room) {
-    case "Fellowship Hall":
-      imageUrl = "url('../img/facilities/fellowshipHall.JPG')";
-      break;
-    case "Gymnasium":
-      imageUrl = "url('../img/facilities/flc-1.jpeg')";
-      break;
-    default:
-      imageUrl = "";
-  }
-
-  backgroundImage.style.backgroundImage = imageUrl;
-});
 
 
-  
 
-  flatpickr("#date", {
-    minDate: "today",
-    dateFormat: "Y-m-d",
-    disable: ["2025-07-01", "2025-07-02"],
-    onDayCreate: function(dObj, dStr, fp, dayElem) {
-      const disabledDates = ["2025-07-01", "2025-07-02"];
-      const dateString = dayElem.dateObj.toISOString().split('T')[0];
-      if (disabledDates.includes(dateString)) {
-        dayElem.classList.add("bg-gray-300", "text-gray-500", "cursor-not-allowed");
-      }
-    },
-    onChange: () => {
-      roomSection.classList.remove("hidden");
-    }
-  });
+<script src="js/roomRenter-script.js"></script>
 
-  document.getElementById("room").addEventListener("change", () => {
-    timeSection.classList.remove("hidden");
-  });
 
-  function updateOutTime() {
-    const startTime = document.getElementById("start-time").value;
-    const duration = parseInt(document.getElementById("duration").value, 10);
-    const outTimeSpan = document.getElementById("out-time");
+    <script src="../js/top.js"></script>
+    <script src="../js/clearstreamForm.js"></script>
 
-    if (startTime && duration) {
-      const [hours, minutes] = startTime.split(":").map(Number);
-      const end = new Date();
-      end.setHours(hours, minutes, 0, 0);
-      end.setMinutes(end.getMinutes() + duration * 60);
-      outTimeSpan.textContent = `${end.getHours().toString().padStart(2, "0")}:${end.getMinutes().toString().padStart(2, "0")}`;
 
-      outLabel.classList.remove("hidden");
-      nameSection.classList.remove("hidden");
-      emailSection.classList.remove("hidden");
-      purposeSection.classList.remove("hidden");
-      buttons.classList.remove("hidden");
-    } else {
-      outLabel.classList.add("hidden");
-      nameSection.classList.add("hidden");
-      emailSection.classList.add("hidden");
-      purposeSection.classList.add("hidden");
-      buttons.classList.add("hidden");
-    }
-  }
 
-  document.getElementById("start-time").addEventListener("input", updateOutTime);
-  document.getElementById("duration").addEventListener("change", updateOutTime);
 
-    document.querySelector("#action-buttons button[type='button']").addEventListener("click", function (e) {
-  e.preventDefault(); // Prevents page reload or real submission
+        <script src="../js/navbarFooter.js"></script>
+        <script src="../js/mobile-menu.js"></script>
 
-  // TODO: Validate form or show modal
-  alert("Checking Available!");
-
-  // Example: Show your own modal instead of alert here
-});
-
-  document.querySelector("form").addEventListener("submit", function (e) {
-  e.preventDefault(); // Prevents page reload or real submission
-
-  // TODO: Validate form or show modal
-  alert("Booking submitted! (This is where your payment modal would launch.)");
-
-  // Example: Show your own modal instead of alert here
-});
-
-});
-</script>
-
+        <script src="../js/section-scroll.js"></script>
+        <script src="../js/dropDown.js"></script>
 
 </body>
 </html>
