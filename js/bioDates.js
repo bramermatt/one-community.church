@@ -15,9 +15,11 @@ document.addEventListener("DOMContentLoaded", function () {
     // Function to calculate age in months if under 1 year
     function calculateMonths(birthDate) {
         const today = new Date();
-        const diffTime = today - birthDate;
-        const diffMonths = Math.floor(diffTime / (1000 * 60 * 60 * 24 * 30.44)); // Approximate average month length
-        return diffMonths;
+        let months = (today.getFullYear() - birthDate.getFullYear()) * 12 + (today.getMonth() - birthDate.getMonth());
+        if (today.getDate() < birthDate.getDate()) {
+            months--;
+        }
+        return months;
     }
 
     // Dates of birth
@@ -32,8 +34,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const ourWeddingDate = calculateAge(weddingDate);
     const sonAge = calculateAge(sonBirthDate);
     
-    // Check if daughter is under 1 year
-    const daughterAge = calculateAge(daughterBirthDate) === 0 ? calculateMonths(daughterBirthDate) + " months" : "1";
+    // Format daughter's age: months if under 1 year, otherwise years
+    const daughterYears = calculateAge(daughterBirthDate);
+    const daughterAge = daughterYears === 0 ? calculateMonths(daughterBirthDate) + " months" : daughterYears;
     
     // Update the HTML with the calculated ages
     document.getElementById("matt-age").textContent = myAge;

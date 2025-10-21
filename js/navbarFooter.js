@@ -189,7 +189,7 @@ document.addEventListener("DOMContentLoaded", function() {
         
                 <div class="pd-15">
                     <h1>Renting the Church?</h1>
-                    <p><a href="https://na4.documents.adobe.com/public/esignWidget?wid=CBFCIBAA3AAABLblqZhAeefzUVcJGUv4jGP4Yp1HSSuhroSxI4Oh0ZFdVfmL5aJKAW9OQ296dWqqaNymFM5k*" target="_blank">Facilities Agreement</a></p>
+                    <p><a href="https://tinyurl.com/3vmvjuph" target="_blank">Facilities Agreement</a></p>
                 </div>
         
                 <div class="pd-15">
@@ -244,7 +244,7 @@ const footerHTML = `
 
         <div class="pd-15">
             <h1>Facilities Agreement</h1>
-                    <p><a href="https://na4.documents.adobe.com/public/esignWidget?wid=CBFCIBAA3AAABLblqZhAeefzUVcJGUv4jGP4Yp1HSSuhroSxI4Oh0ZFdVfmL5aJKAW9OQ296dWqqaNymFM5k*" target="_blank">Facilities Agreement</a></p>
+                    <p><a href="https://tinyurl.com/3vmvjuph" target="_blank">Facilities Agreement</a></p>
         </div>
 
         <div class="pd-15">
