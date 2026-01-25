@@ -184,7 +184,7 @@ document.addEventListener("DOMContentLoaded", function() {
         
                 <div class="pd-15">
                     <h1>Events Calendar</h1>
-                    <p><a href="https://calendar.google.com/calendar/embed?src=177ministries%40gmail.com&ctz=America%2FNew_York" target="_blank" rel="noopener noreferrer">One Community Church Event Calendar</a></p>
+                    <p><i class="fa-regular fa-calendar"></i> <a href="https://calendar.google.com/calendar/embed?src=177ministries%40gmail.com&ctz=America%2FNew_York" target="_blank" rel="noopener noreferrer"> One Community Church Event Calendar</a></p>
                 </div>
         
                 <div class="pd-15">
